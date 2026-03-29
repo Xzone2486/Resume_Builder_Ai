@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Navbar } from "@/components/layout/Navbar"
+import { Header } from "@/components/ui/header-1"
 import { Footer } from "@/components/layout/Footer"
 import { ScoreGauge } from "@/components/ats/ScoreGauge"
 import { ScoreBreakdown } from "@/components/ats/ScoreBreakdown"
@@ -90,7 +90,7 @@ export default function AtsAnalysisPage() {
         <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-indigo-500/[0.02] to-transparent pointer-events-none" />
       </div>
 
-      <Navbar />
+      <Header />
       <div className="h-24 relative z-10 flex-none" />
 
       <div className="flex-1 container px-6 mx-auto py-8 relative z-10">

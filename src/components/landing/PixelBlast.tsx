@@ -115,29 +115,36 @@ const createLiquidEffect = (texture: THREE.Texture, opts?: any) => {
 
 const SHAPE_MAP: Record<string, number> = { square: 0, circle: 1, triangle: 2, diamond: 3 };
 
-const VERTEX_SRC = `void main() { gl_Position = vec4(position, 1.0); }`;
+const VERTEX_SRC = `
+  in vec3 position;
+  void main() {
+    gl_Position = vec4(position, 1.0);
+  }
+`;
 
 const FRAGMENT_SRC = `
 precision highp float;
-uniform vec3  uColor;
-uniform vec2  uResolution;
+uniform vec3 uColor;
+uniform vec2 uResolution;
 uniform float uTime;
 uniform float uPixelSize;
 uniform float uScale;
 uniform float uDensity;
 uniform float uPixelJitter;
-uniform int   uEnableRipples;
+uniform int uEnableRipples;
 uniform float uRippleSpeed;
 uniform float uRippleThickness;
 uniform float uRippleIntensity;
 uniform float uEdgeFade;
-uniform int   uShapeType;
-const int SHAPE_SQUARE   = 0;
-const int SHAPE_CIRCLE   = 1;
+uniform int uShapeType;
+
+const int SHAPE_SQUARE = 0;
+const int SHAPE_CIRCLE = 1;
 const int SHAPE_TRIANGLE = 2;
-const int SHAPE_DIAMOND  = 3;
-const int   MAX_CLICKS = 10;
-uniform vec2  uClickPos  [MAX_CLICKS];
+const int SHAPE_DIAMOND = 3;
+
+#define MAX_CLICKS 10
+uniform vec2 uClickPos[MAX_CLICKS];
 uniform float uClickTimes[MAX_CLICKS];
 out vec4 fragColor;
 float Bayer2(vec2 a){a=floor(a);return fract(a.x/2.+a.y*a.y*.75);}
@@ -162,7 +169,7 @@ float fbm2(vec2 uv,float t){
   vec3 p=vec3(uv*uScale,t);float amp=1.0;float freq=1.0;float sum=1.0;
   for(int i=0;i<FBM_OCTAVES;++i){sum+=amp*vnoise(p*freq);freq*=FBM_LACUNARITY;amp*=FBM_GAIN;}
   return sum*0.5+0.5;
-}
+  }
 float maskCircle(vec2 p,float cov){float r=sqrt(cov)*.25;float d=length(p-0.5)-r;float aa=0.5*fwidth(d);return cov*(1.0-smoothstep(-aa,aa,d*2.0));}
 float maskTriangle(vec2 p,vec2 id,float cov){bool flip=mod(id.x+id.y,2.0)>0.5;if(flip)p.x=1.0-p.x;float r=sqrt(cov);float d=p.y-r*(1.0-p.x);float aa=fwidth(d);return cov*clamp(0.5-d/aa,0.0,1.0);}
 float maskDiamond(vec2 p,float cov){float r=sqrt(cov)*0.564;return step(abs(p.x-0.49)+abs(p.y-0.49),r);}

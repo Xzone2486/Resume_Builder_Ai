@@ -37,7 +37,7 @@ export function HowItWorks() {
   ]
 
   return (
-    <section className="py-32 relative overflow-hidden bg-white/30 dark:bg-zinc-950/30" ref={containerRef}>
+    <section className="py-16 relative overflow-hidden bg-white/30 dark:bg-zinc-950/30" ref={containerRef}>
       {/* Rich background fills */}
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.04] via-transparent to-violet-500/[0.04] pointer-events-none" />

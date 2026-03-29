@@ -1,7 +1,4 @@
-"use client"
-
-import * as React from "react"
-import { Navbar } from "@/components/layout/Navbar"
+import { Header } from "@/components/ui/header-1"
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,7 +17,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="absolute bottom-10 right-0 w-[400px] h-[400px] rounded-full bg-gradient-to-tl from-blue-200 via-sky-100 to-cyan-100 opacity-45 blur-3xl animate-blob animation-delay-2000" />
       </div>
 
-      <Navbar />
+      <Header />
       <main className="flex-1 px-6 py-8 pt-24 overflow-x-hidden relative z-10">
         <div className="max-w-6xl mx-auto w-full">
           {children}

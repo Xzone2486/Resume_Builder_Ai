@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Navbar } from "@/components/layout/Navbar";
+import { Header } from "@/components/ui/header-1";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/landing/Hero";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
@@ -8,15 +8,15 @@ import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { HowWeHelp } from "@/components/landing/HowWeHelp";
 import { WithYouEveryStep } from "@/components/landing/WithYouEveryStep";
+import { FAQSection } from "@/components/landing/FAQSection";
 import ColorBends from "@/components/landing/ColorBends";
 import LineWaves from "@/components/landing/LineWaves";
-
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col selection:bg-indigo-500/30 relative">
 
-      <Navbar />
+      <Header />
       
       <div className="flex-1 flex flex-col relative z-10">
         <Hero />
@@ -28,10 +28,11 @@ export default function Home() {
 
         <WithYouEveryStep />
         <HowItWorks />
+        <FAQSection />
       </div>
 
       {/* Pre-footer CTA — LineWaves shader background */}
-      <section className="py-28 relative overflow-hidden border-t border-white/10 bg-zinc-950 z-10 dark">
+      <section className="py-20 relative overflow-hidden border-t border-white/10 bg-zinc-950 z-10 dark">
         {/* Full-bleed shader canvas */}
         <div aria-hidden="true" className="absolute inset-0 z-0 mix-blend-screen opacity-20">
           <LineWaves

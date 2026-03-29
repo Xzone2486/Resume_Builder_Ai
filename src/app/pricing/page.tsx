@@ -1,6 +1,6 @@
 "use client"
 
-import { Navbar } from "@/components/layout/Navbar"
+import { Header } from "@/components/ui/header-1"
 import { Footer } from "@/components/layout/Footer"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
@@ -105,7 +105,7 @@ export default function PricingPage() {
         <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-indigo-500/[0.02] to-transparent pointer-events-none" />
       </div>
 
-      <Navbar />
+      <Header />
       
       <div className="flex-1 w-full flex flex-col items-center pt-32 pb-24 px-4 sm:px-6 relative isolate z-10">
         

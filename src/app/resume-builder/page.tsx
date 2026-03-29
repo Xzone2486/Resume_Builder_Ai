@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/layout/Navbar"
+import { Header } from "@/components/ui/header-1"
 import { Footer } from "@/components/layout/Footer"
 import { JDSection } from "@/components/resume-builder/JDSection"
 import { BuilderForm } from "@/components/resume-builder/BuilderForm"
@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button"
 export default function ResumeBuilderPage() {
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col">
-      <Navbar />
+      <Header />
       
-      <div className="h-20" /> {/* Spacer */}
+      <div className="h-6" /> {/* Spacer */}
 
       <div className="flex-1 container px-4 lg:px-6 mx-auto py-6 flex flex-col h-full">
         {/* JD Parser Section */}

@@ -41,7 +41,7 @@ export function ResumeCarousel() {
   }, [])
 
   return (
-      <section id="examples" className="py-24 bg-zinc-50 relative overflow-hidden">
+      <section id="examples" className="py-12 bg-zinc-50 relative overflow-hidden">
       {/* Rich background fills */}
       <div className="absolute inset-0 bg-dot-pattern-lg pointer-events-none" />
       <div className="absolute top-0 left-[-5%] w-[350px] h-[350px] bg-violet-500/[0.05] rounded-full blur-[80px] animate-float-slow pointer-events-none" />

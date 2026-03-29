@@ -193,7 +193,7 @@ function ScrollRow({ items, direction }: { items: typeof testimonials; direction
 
 export function Testimonials() {
   return (
-    <section className="py-24 relative overflow-hidden bg-zinc-950 dark text-foreground">
+    <section className="py-12 relative overflow-hidden bg-zinc-950 dark text-foreground">
       {/* Dynamic Floating Lines Background */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-screen">
         <FloatingLines

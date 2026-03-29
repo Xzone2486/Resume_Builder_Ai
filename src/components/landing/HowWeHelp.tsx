@@ -55,7 +55,7 @@ const features = [
   },
 ]
 
-const VH_PER_CARD = 25
+const VH_PER_CARD = 50
 const HEADER_VH = 10
 
 export function HowWeHelp() {
@@ -114,13 +114,13 @@ export function HowWeHelp() {
       className="relative"
       style={{
         height: `${totalVh}vh`,
-        background: "linear-gradient(135deg, #0f0c29 0%, #302b63 45%, #24243e 75%, #0f0c29 100%)",
+        background: "white",
       }}
     >
-      {/* Ambient blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-pink-500/15 rounded-full blur-[100px] pointer-events-none" />
+      {/* Ambient blobs (lightened) */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-200/40 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-100/40 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-64 h-64 bg-pink-100/30 rounded-full blur-[100px] pointer-events-none" />
 
       {/* ─── Sticky viewport ─── */}
       <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
@@ -133,17 +133,17 @@ export function HowWeHelp() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/20 text-violet-300 text-sm font-medium mb-5 border border-violet-500/30">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100 text-violet-600 text-sm font-medium mb-5 border border-violet-200">
               <Zap className="w-4 h-4" />
               Supercharge Your Job Search
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-3 text-white">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-3 text-zinc-900">
               How ResumeBoost AI{" "}
-              <span className="bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
                 Powers Your Success
               </span>
             </h2>
-            <p className="text-base text-white/55">
+            <p className="text-base text-zinc-500">
               Every feature is built with one goal — to get your resume past the bots and into the hands of real hiring managers.
             </p>
           </motion.div>

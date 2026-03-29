@@ -24,8 +24,8 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+    <section className="relative min-h-[85vh] flex items-center pt-16 pb-12 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <SoftAurora
           speed={0.6}
           scale={1.5}

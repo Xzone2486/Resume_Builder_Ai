@@ -1,7 +1,7 @@
-"use client"
-
 import { useAuth } from "@/lib/auth-context"
+import { Header } from "@/components/ui/header-1"
 import { ResumeTable } from "@/components/dashboard/ResumeTable"
+import { Footer } from "@/components/layout/Footer"
 import { FileText, BarChart2, Star, Calendar, Mail, User, Edit2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -18,7 +18,11 @@ export default function ProfilePage() {
   const { user } = useAuth()
 
   return (
-    <div className="flex flex-col gap-8 pb-12 max-w-4xl mx-auto">
+    <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col">
+      <Header />
+      
+      <div className="flex-1 flex flex-col gap-8 pb-12 items-center pt-24 px-4">
+        <div className="w-full max-w-4xl">
 
       {/* ── Profile Card ── */}
       <motion.div
@@ -93,7 +97,9 @@ export default function ProfilePage() {
           <ResumeTable />
         </div>
       </motion.div>
-
+      </div>
     </div>
+    <Footer />
+    </main>
   )
 }

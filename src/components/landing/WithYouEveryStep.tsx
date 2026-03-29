@@ -88,7 +88,7 @@ const cardVariants = {
 
 export function WithYouEveryStep() {
   return (
-    <section className="py-24 relative w-full">
+    <section className="py-12 relative w-full">
       <div className="container px-6 mx-auto relative z-10">
         {/* Header */}
         <motion.div
