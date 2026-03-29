@@ -1,3 +1,5 @@
+"use client"
+
 import { useAuth } from "@/lib/auth-context"
 import { Header } from "@/components/ui/header-1"
 import { ResumeTable } from "@/components/dashboard/ResumeTable"
