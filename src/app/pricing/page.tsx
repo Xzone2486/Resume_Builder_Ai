@@ -84,9 +84,9 @@ export default function PricingPage() {
   }
 
   return (
-    <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center overflow-hidden bg-hero-gradient">
+    <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center bg-hero-gradient">
       {/* Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
         <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] bg-violet-500/[0.03] blur-[100px] rounded-full animate-blob pointer-events-none" />
         <div className="absolute top-[30%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/[0.02] blur-[100px] rounded-full animate-blob animation-delay-2000 pointer-events-none" />

@@ -58,7 +58,7 @@ export default function ResumeBuilderPage() {
           </div>
         </div>
       </div>
-
+      <Footer />
     </main>
   )
 }
