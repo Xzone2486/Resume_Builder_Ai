@@ -88,11 +88,7 @@ const cardVariants = {
 
 export function WithYouEveryStep() {
   return (
-    <section className="py-24 relative overflow-hidden bg-zinc-50 dark:bg-zinc-950/50">
-      {/* Decorative elements */}
-      <div className="absolute top-10 right-20 w-80 h-80 bg-violet-500/5 rounded-full blur-3xl animate-blob pointer-events-none" />
-      <div className="absolute bottom-10 left-20 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl animate-blob animation-delay-2000 pointer-events-none" />
-
+    <section className="py-24 relative w-full">
       <div className="container px-6 mx-auto relative z-10">
         {/* Header */}
         <motion.div
@@ -129,7 +125,7 @@ export function WithYouEveryStep() {
               variants={cardVariants}
               className="group relative"
             >
-              <div className="h-full p-8 rounded-3xl bg-white dark:bg-zinc-900/80 border border-zinc-200/80 dark:border-zinc-800 hover:border-transparent transition-all duration-500 relative overflow-hidden">
+              <div className="h-full p-8 rounded-3xl bg-zinc-50 border border-zinc-200 hover:border-transparent transition-all duration-500 relative overflow-hidden">
                 {/* Hover gradient overlay */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-[0.04] transition-opacity duration-500 pointer-events-none`}
@@ -183,7 +179,7 @@ export function WithYouEveryStep() {
             href="/resume-builder"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.03] transition-all duration-300 rounded-xl px-10 py-4 text-base font-semibold group relative overflow-hidden"
           >
-            <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" />
+            {/* <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" /> */}
             <span className="relative flex items-center gap-2">
               Start Your Journey Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

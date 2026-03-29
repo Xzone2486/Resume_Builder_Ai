@@ -58,9 +58,9 @@ function FloatingResume() {
 
   useFrame((state) => {
     if (groupRef.current) {
-      // Gentle parallax facing mouse
-      groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, (state.pointer.x * Math.PI) / 8, 0.05)
-      groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, (-state.pointer.y * Math.PI) / 8, 0.05)
+      // Auto-rotate left and right
+      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * (Math.PI / 8)
+      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * (Math.PI / 32)
     }
   })
 

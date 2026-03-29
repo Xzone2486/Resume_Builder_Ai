@@ -41,7 +41,7 @@ export function ResumeCarousel() {
   }, [])
 
   return (
-    <section id="examples" className="py-24 bg-zinc-50/80 dark:bg-zinc-950/50 relative overflow-hidden">
+      <section id="examples" className="py-24 bg-zinc-50 relative overflow-hidden">
       {/* Rich background fills */}
       <div className="absolute inset-0 bg-dot-pattern-lg pointer-events-none" />
       <div className="absolute top-0 left-[-5%] w-[350px] h-[350px] bg-violet-500/[0.05] rounded-full blur-[80px] animate-float-slow pointer-events-none" />
@@ -69,7 +69,7 @@ export function ResumeCarousel() {
           {allResumes.map((resume, i) => (
             <div
               key={i}
-              className="min-w-[300px] md:min-w-[320px] h-[460px] rounded-2xl bg-white shadow-xl border border-border/50 relative flex-shrink-0"
+              className="min-w-[300px] md:min-w-[320px] h-[460px] rounded-2xl bg-white shadow-xl border border-zinc-200 relative flex-shrink-0"
               style={{ transition: "transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease", overflow: "visible" }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLDivElement
@@ -88,7 +88,7 @@ export function ResumeCarousel() {
               <div className={`absolute inset-0 bg-gradient-to-b ${resume.color} pointer-events-none rounded-2xl`} />
 
               {/* Score Badge — outside the overflow wrapper so it never clips */}
-              <div className="absolute -top-4 -right-4 z-20 bg-white shadow-xl border border-border rounded-2xl p-3 flex items-center gap-3">
+              <div className="absolute -top-4 -right-4 z-20 bg-white shadow-xl border border-zinc-200 rounded-2xl p-3 flex items-center gap-3">
                 <div className={`w-10 h-10 rounded-full ${resume.badge} flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
                   {resume.score}
                 </div>

@@ -45,10 +45,8 @@ export function Navbar() {
     <>
       <SignInModal />
 
-      <header className={`fixed top-0 inset-x-0 z-50 flex justify-center transition-all duration-300 ${isScrolled ? "pt-2" : "pt-4"}`}>
-        <div className={`flex items-center justify-between w-full max-w-6xl mx-auto px-6 transition-all duration-300 ${
-          isScrolled ? "py-3 glass rounded-2xl mx-4" : "py-4 bg-transparent rounded-none mx-0"
-        }`}>
+      <header className="fixed top-0 inset-x-0 z-50 flex justify-center pt-4">
+        <div className="flex items-center justify-between w-full max-w-6xl mx-auto px-6 py-3 bg-white/70 backdrop-blur-3xl border border-zinc-200/50 rounded-full mx-4 shadow-sm">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md group-hover:scale-105 transition-transform">
@@ -77,9 +75,9 @@ export function Navbar() {
               <div className="relative" ref={profileRef}>
                 <button
                   onClick={() => setProfileOpen(!profileOpen)}
-                  className="flex items-center gap-2 pl-1 pr-3 py-1 rounded-full border border-border hover:border-indigo-300 bg-white shadow-sm hover:shadow-md transition-all"
+                  className="flex items-center gap-2 pl-1 pr-3 py-1 rounded-full border border-border hover:border-indigo-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
                 >
-                  <img src={user.avatar} className="w-7 h-7 rounded-full bg-zinc-100" alt={user.name} />
+                  <img src={user.avatar} className="w-7 h-7 rounded-full bg-zinc-100 dark:bg-zinc-800" alt={user.name} />
                   <span className="text-sm font-medium hidden sm:block max-w-[120px] truncate">{user.name}</span>
                   <ChevronDown className={`w-3.5 h-3.5 text-muted-foreground transition-transform ${profileOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -90,11 +88,10 @@ export function Navbar() {
                       initial={{ opacity: 0, y: 8, scale: 0.96 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.15 }}
-                      className="absolute right-0 top-full mt-2 w-56 bg-white rounded-2xl border border-zinc-100 shadow-xl shadow-zinc-200/60 py-2 z-50"
+                      className="absolute right-0 top-full mt-2 w-56 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-xl py-2 z-50"
                     >
-                      <div className="px-4 py-2.5 border-b border-zinc-100 mb-1">
-                        <p className="text-sm font-semibold">{user.name}</p>
+                      <div className="px-4 py-2.5 border-b border-zinc-100 dark:border-zinc-800 mb-1">
+                        <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
                         <p className="text-xs text-muted-foreground truncate">{user.email}</p>
                       </div>
                       {[
@@ -106,7 +103,7 @@ export function Navbar() {
                           key={href}
                           href={href}
                           onClick={() => setProfileOpen(false)}
-                          className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-zinc-50 transition-colors"
+                          className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
                         >
                           <Icon className="w-4 h-4 text-muted-foreground" /> {label}
                         </Link>
@@ -144,7 +141,7 @@ export function Navbar() {
       <motion.div
         initial={false}
         animate={{ opacity: mobileMenuOpen ? 1 : 0, pointerEvents: mobileMenuOpen ? "auto" : "none" }}
-        className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl md:hidden pt-24 pb-6 px-6 flex flex-col"
+        className="fixed inset-0 z-40 bg-zinc-50/95 dark:bg-zinc-950/95 backdrop-blur-xl md:hidden pt-24 pb-6 px-6 flex flex-col"
       >
         <nav className="flex flex-col gap-6 mt-8 text-center flex-1">
           {navLinks.map((link, i) => (

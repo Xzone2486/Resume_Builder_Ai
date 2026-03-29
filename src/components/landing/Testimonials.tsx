@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
+import FloatingLines from "./FloatingLines"
 
 const testimonials = [
   {
@@ -192,10 +193,22 @@ function ScrollRow({ items, direction }: { items: typeof testimonials; direction
 
 export function Testimonials() {
   return (
-    <section className="py-24 relative overflow-hidden bg-zinc-50/50 dark:bg-zinc-950">
-      {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl animate-blob pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl animate-blob animation-delay-4000 pointer-events-none" />
+    <section className="py-24 relative overflow-hidden bg-zinc-950 dark text-foreground">
+      {/* Dynamic Floating Lines Background */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-screen">
+        <FloatingLines
+          linesGradient={['#7cff67', '#B19EEF', '#5227FF']}
+          enabledWaves={['top', 'middle', 'bottom']}
+          lineCount={[6, 6, 6]}
+          lineDistance={[5, 5, 5]}
+          topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
+          middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
+          bendRadius={5}
+          bendStrength={-0.5}
+          interactive={false}
+          parallax={false}
+        />
+      </div>
 
       <div className="container px-6 mx-auto mb-14 relative z-10">
         <motion.div

@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import dynamic from 'next/dynamic'
+import SoftAurora from "./SoftAurora"
 
 const HeroCanvas = dynamic(() => import("./HeroCanvas"), { ssr: false, loading: () => <div className="w-full h-[500px] lg:h-[700px] animate-pulse rounded-2xl bg-indigo-500/10" /> })
 
@@ -23,48 +24,25 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-hero-gradient">
-      {/* Dot grid background fill */}
-      <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
-      
-      {/* Large animated blobs for visual richness */}
-      <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] bg-violet-500/[0.03] blur-[100px] rounded-full animate-blob pointer-events-none" />
-      <div className="absolute top-[30%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/[0.02] blur-[100px] rounded-full animate-blob animation-delay-2000 pointer-events-none" />
-      <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-purple-500/[0.02] blur-[120px] rounded-full animate-blob animation-delay-4000 pointer-events-none" />
-      <div className="absolute top-[60%] right-[10%] w-[300px] h-[300px] bg-blue-500/[0.02] blur-[80px] rounded-full animate-float-slow pointer-events-none" />
-
-      {/* Decorative floating badges on sides */}
-      <div className="absolute top-[20%] left-[2%] xl:left-[6%] px-4 py-2 border border-indigo-500/10 bg-background/50 backdrop-blur-sm rounded-2xl -rotate-6 animate-float-slow hidden lg:flex items-center gap-2 pointer-events-none shadow-sm z-0">
-        <span className="text-xl">✨</span>
-        <span className="text-sm font-medium text-muted-foreground/80">AI-Powered</span>
+    <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+        <SoftAurora
+          speed={0.6}
+          scale={1.5}
+          brightness={1}
+          color1="#f7f7f7"
+          color2="#8b5cf6"
+          noiseFrequency={2.5}
+          noiseAmplitude={1}
+          bandHeight={0.5}
+          bandSpread={1}
+          octaveDecay={0.1}
+          layerOffset={0}
+          colorSpeed={1}
+          enableMouseInteraction
+          mouseInfluence={0.25}
+        />
       </div>
-
-      <div className="absolute bottom-[25%] left-[5%] xl:left-[10%] px-4 py-2 border border-violet-500/10 bg-background/50 backdrop-blur-sm rounded-2xl rotate-12 animate-float animation-delay-2000 hidden lg:flex items-center gap-2 pointer-events-none shadow-sm z-0">
-        <span className="text-xl">🎯</span>
-        <span className="text-sm font-medium text-muted-foreground/80">ATS-Optimized</span>
-      </div>
-
-      <div className="absolute top-[25%] right-[5%] xl:right-[10%] px-4 py-2 border border-indigo-500/10 bg-background/50 backdrop-blur-sm rounded-2xl rotate-6 animate-float hidden lg:flex items-center gap-2 pointer-events-none shadow-sm z-0">
-        <span className="text-xl">🚀</span>
-        <span className="text-sm font-medium text-muted-foreground/80">3x Interviews</span>
-      </div>
-
-      <div className="absolute bottom-[20%] right-[2%] xl:right-[6%] px-4 py-2 border border-purple-500/10 bg-background/50 backdrop-blur-sm rounded-2xl -rotate-12 animate-float-slow animation-delay-4000 hidden lg:flex items-center gap-2 pointer-events-none shadow-sm z-0">
-        <span className="text-xl">💼</span>
-        <span className="text-sm font-medium text-muted-foreground/80">Expert Templates</span>
-      </div>
-
-      {/* Floating accent circles */}
-      <div className="absolute top-[15%] left-[5%] w-3 h-3 bg-indigo-400/[0.08] rounded-full animate-float hidden lg:block" />
-      <div className="absolute top-[25%] left-[3%] w-2 h-2 bg-violet-400/[0.1] rounded-full animate-float animation-delay-2000 hidden lg:block" />
-      <div className="absolute top-[45%] left-[2%] w-4 h-4 bg-purple-400/[0.06] rounded-full animate-float-slow hidden lg:block" />
-      <div className="absolute top-[20%] right-[3%] w-3 h-3 bg-indigo-400/[0.08] rounded-full animate-float animation-delay-4000 hidden lg:block" />
-      <div className="absolute top-[60%] right-[5%] w-2 h-2 bg-violet-400/[0.1] rounded-full animate-float-slow animation-delay-2000 hidden lg:block" />
-
-      {/* Side gradient glows */}
-      <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-violet-500/[0.02] to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-indigo-500/[0.02] to-transparent pointer-events-none" />
-
       <div className="container px-6 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           

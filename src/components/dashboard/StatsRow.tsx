@@ -28,38 +28,50 @@ export function StatsRow() {
       <StatCard 
         title="Total Resumes" 
         value={4} 
-        icon={<FileText className="w-4 h-4 text-blue-500" />} 
+        icon={<FileText className="w-4 h-4 text-blue-600" />} 
         trend="+1 this week" 
-        trendUp={true} 
+        trendUp={true}
+        color="blue"
       />
       <StatCard 
         title="Best ATS Score" 
         value={92} 
-        icon={<TrendingUp className="w-4 h-4 text-green-500" />} 
+        icon={<TrendingUp className="w-4 h-4 text-green-600" />} 
         trend="+14% vs last month" 
-        trendUp={true} 
+        trendUp={true}
+        color="green"
       />
       <StatCard 
         title="Applications Sent" 
         value={23} 
-        icon={<Send className="w-4 h-4 text-violet-500" />} 
+        icon={<Send className="w-4 h-4 text-violet-600" />} 
         trend="Active" 
-        trendUp={true} 
+        trendUp={true}
+        color="violet"
       />
       <StatCard 
         title="Interviews" 
         value={3} 
-        icon={<CheckCircle className="w-4 h-4 text-orange-500" />} 
+        icon={<CheckCircle className="w-4 h-4 text-orange-600" />} 
         trend="13% conversion" 
-        trendUp={true} 
+        trendUp={true}
+        color="orange"
       />
     </motion.div>
   )
 }
 
-function StatCard({ title, value, icon, trend, trendUp }: any) {
+const colorMap: Record<string, { bg: string; border: string; icon: string; value: string; trend: string }> = {
+  blue:   { bg: "bg-blue-50/70",   border: "border-blue-200/60",   icon: "bg-blue-100",   value: "text-blue-900",   trend: "text-blue-700" },
+  green:  { bg: "bg-green-50/70",  border: "border-green-200/60",  icon: "bg-green-100",  value: "text-green-900",  trend: "text-green-700" },
+  violet: { bg: "bg-violet-50/70", border: "border-violet-200/60", icon: "bg-violet-100", value: "text-violet-900", trend: "text-violet-700" },
+  orange: { bg: "bg-orange-50/70", border: "border-orange-200/60", icon: "bg-orange-100", value: "text-orange-900", trend: "text-orange-700" },
+}
+
+function StatCard({ title, value, icon, trend, trendUp, color = "blue" }: any) {
   // Count up animation logic
   const [displayValue, setDisplayValue] = useState(0)
+  const c = colorMap[color]
 
   useEffect(() => {
     let startTime: number
@@ -77,15 +89,15 @@ function StatCard({ title, value, icon, trend, trendUp }: any) {
   }, [value])
 
   return (
-    <motion.div variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }} className="bg-card border border-border/50 rounded-2xl p-5 hover:border-border hover:shadow-md transition-all group cursor-pointer">
+    <motion.div variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }} className={`${c.bg} ${c.border} border rounded-2xl p-5 backdrop-blur-sm hover:shadow-md transition-all group cursor-pointer`}>
       <div className="flex items-center justify-between mb-4">
         <span className="text-sm font-medium text-muted-foreground">{title}</span>
-        <div className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800/50 flex items-center justify-center group-hover:scale-110 transition-transform">
+        <div className={`w-8 h-8 rounded-full ${c.icon} flex items-center justify-center group-hover:scale-110 transition-transform`}>
           {icon}
         </div>
       </div>
-      <div className="text-3xl font-bold tracking-tight mb-1">{displayValue}</div>
-      <div className="text-xs font-medium text-green-600 dark:text-green-500 flex items-center gap-1">
+      <div className={`text-3xl font-bold tracking-tight mb-1 ${c.value}`}>{displayValue}</div>
+      <div className={`text-xs font-medium ${c.trend} flex items-center gap-1`}>
         {trendUp ? <TrendingUp className="w-3 h-3" /> : null}
         {trend}
       </div>

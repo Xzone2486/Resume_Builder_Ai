@@ -53,7 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {variant === 'gradient' ? (
           <>
-            <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" />
+            {/* <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" /> */}
             <span className="relative flex items-center justify-center gap-2">{props.children}</span>
           </>
         ) : (

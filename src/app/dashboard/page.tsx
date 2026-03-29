@@ -16,37 +16,39 @@ export default function Dashboard() {
         
         {/* Actions (1/3 width) */}
         <div className="col-span-1 flex flex-col gap-4">
-          <div className="glass-card rounded-2xl p-6 border-dashed border-2 hover:border-indigo-500/50 transition-colors flex flex-col items-center justify-center text-center group cursor-pointer h-48">
-            <div className="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <UploadCloud className="w-6 h-6 text-indigo-500" />
+          {/* Upload – teal tint */}
+          <div className="rounded-2xl p-6 border-2 border-dashed border-teal-300/60 bg-teal-50/60 backdrop-blur-sm hover:border-teal-400/80 hover:bg-teal-50/80 transition-all flex flex-col items-center justify-center text-center group cursor-pointer h-48 shadow-sm">
+            <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
+              <UploadCloud className="w-6 h-6 text-teal-600" />
             </div>
-            <h3 className="font-bold mb-1">Upload Resume</h3>
-            <p className="text-xs text-muted-foreground">PDF, DOCX up to 5MB</p>
+            <h3 className="font-bold mb-1 text-teal-900">Upload Resume</h3>
+            <p className="text-xs text-teal-700/70">PDF, DOCX up to 5MB</p>
           </div>
 
-          <div className="glass-card rounded-2xl p-6 border border-border/50 hover:border-violet-500/50 transition-colors flex flex-col items-center justify-center text-center group cursor-pointer h-48 bg-gradient-to-br from-violet-500/5 to-transparent">
-            <div className="w-12 h-12 rounded-full bg-violet-50 dark:bg-violet-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <FileEdit className="w-6 h-6 text-violet-500" />
+          {/* AI Builder – violet/pink tint */}
+          <div className="rounded-2xl p-6 border border-violet-200/70 bg-violet-50/60 backdrop-blur-sm hover:border-violet-400/60 hover:bg-violet-50/90 transition-all flex flex-col items-center justify-center text-center group cursor-pointer h-48 shadow-sm">
+            <div className="w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
+              <FileEdit className="w-6 h-6 text-violet-600" />
             </div>
-            <h3 className="font-bold mb-1">AI Builder</h3>
-            <p className="text-xs text-muted-foreground">Start from scratch or LinkedIn</p>
+            <h3 className="font-bold mb-1 text-violet-900">AI Builder</h3>
+            <p className="text-xs text-violet-700/70">Start from scratch or LinkedIn</p>
           </div>
         </div>
 
-        {/* ATS Chart (2/3 width) */}
-        <div className="lg:col-span-2 glass-card rounded-2xl p-6 border border-border/50 h-full min-h-[400px]">
-          <h3 className="font-bold mb-6">ATS Score Trend</h3>
-          <div className="w-full h-[300px] flex items-center justify-center text-muted-foreground text-sm border border-border rounded-xl bg-zinc-50 dark:bg-zinc-900/50 p-4">
+        {/* ATS Chart – rose/pink tint */}
+        <div className="lg:col-span-2 rounded-2xl p-6 border border-rose-200/60 bg-rose-50/50 backdrop-blur-sm h-full min-h-[400px] shadow-sm">
+          <h3 className="font-bold mb-6 text-rose-900">ATS Score Trend</h3>
+          <div className="w-full h-[300px] flex items-center justify-center text-muted-foreground text-sm border border-rose-100 rounded-xl bg-white/70 p-4">
             <AtsScoreChart />
           </div>
         </div>
         
       </div>
 
-      {/* Recent Resumes */}
+      {/* Recent Resumes – sky/blue tint */}
       <div className="mt-8">
-        <h3 className="font-bold text-lg mb-4">Recent Resumes</h3>
-        <div className="w-full text-muted-foreground text-sm border border-border rounded-2xl bg-card overflow-hidden shadow-sm">
+        <h3 className="font-bold text-lg mb-4 text-sky-900">Recent Resumes</h3>
+        <div className="w-full border border-sky-200/60 rounded-2xl bg-sky-50/50 backdrop-blur-sm overflow-hidden shadow-sm">
            <ResumeTable />
         </div>
       </div>
