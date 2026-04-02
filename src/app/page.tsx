@@ -9,7 +9,6 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { HowWeHelp } from "@/components/landing/HowWeHelp";
 import { WithYouEveryStep } from "@/components/landing/WithYouEveryStep";
 import { FAQSection } from "@/components/landing/FAQSection";
-import ColorBends from "@/components/landing/ColorBends";
 import LineWaves from "@/components/landing/LineWaves";
 
 export default function Home() {
