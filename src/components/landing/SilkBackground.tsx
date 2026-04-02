@@ -4,7 +4,6 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { forwardRef, useRef, useMemo, useLayoutEffect } from 'react'
 import * as THREE from 'three'
-import dynamic from 'next/dynamic'
 
 const hexToNormalizedRGB = (hex: string): [number, number, number] => {
   hex = hex.replace('#', '')
@@ -173,5 +172,4 @@ function SilkBackground(props: SilkSceneProps) {
   )
 }
 
-// Dynamic import to avoid SSR issues
-export default dynamic(() => Promise.resolve(SilkBackground), { ssr: false })
+export default SilkBackground

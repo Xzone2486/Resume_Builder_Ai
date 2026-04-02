@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "react-router-dom"
 import { ArrowRight, Mail, Hash, Globe } from "lucide-react"
 
 export function Footer() {
@@ -14,11 +14,11 @@ export function Footer() {
           
           {/* Brand Col */}
           <div className="space-y-4">
-             <Link href="/" className="flex items-center gap-2">
+             <Link to="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md">
-                <span className="text-white font-bold text-sm tracking-tight">RB</span>
+                <span className="text-white font-bold text-sm tracking-tight">RZ</span>
               </div>
-              <span className="font-semibold text-lg tracking-tight">ResumeBoost<span className="text-indigo-600 dark:text-indigo-400"> AI</span></span>
+              <span className="font-semibold text-lg tracking-tight">ROZGAR <span className="text-indigo-600 dark:text-indigo-400">24/7</span></span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
               Silicon Valley-tier AI SaaS to optimize your resume. Build, analyze, and land your dream job faster.
@@ -43,9 +43,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
-              <li><Link href="/resume-builder" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Resume Builder</Link></li>
-              <li><Link href="/ats-analysis" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ATS Checker</Link></li>
-              <li><Link href="/pricing" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pricing</Link></li>
+              <li><Link to="/resume-builder" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Resume Builder</Link></li>
+              <li><Link to="/ats-analysis" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ATS Checker</Link></li>
+              <li><Link to="/pricing" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pricing</Link></li>
               <li><a href="#" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Templates</a></li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between border-t border-border/50 pt-8 gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ResumeBoost AI. All rights reserved.
+            © {new Date().getFullYear()} ROZGAR 24/7. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground">Privacy Policy</a>

@@ -10,7 +10,7 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 
 const journeySteps = [
   {
@@ -107,7 +107,7 @@ export function WithYouEveryStep() {
             of Your Job Search
           </h2>
           <p className="text-lg text-muted-foreground">
-            From first draft to final offer — ResumeBoost AI guides you through the entire process with smart tools, instant feedback, and unwavering support.
+            From first draft to final offer — ROZGAR 24/7 guides you through the entire process with smart tools, instant feedback, and unwavering support.
           </p>
         </motion.div>
 
@@ -176,7 +176,7 @@ export function WithYouEveryStep() {
           className="text-center"
         >
           <Link
-            href="/resume-builder"
+            to="/resume-builder"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.03] transition-all duration-300 rounded-xl px-10 py-4 text-base font-semibold group relative overflow-hidden"
           >
             {/* <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" /> */}

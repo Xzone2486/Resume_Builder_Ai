@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/ui/header-1";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/landing/Hero";
@@ -58,17 +58,17 @@ export default function Home() {
             Ready to Land Your Dream Job?
           </h2>
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Join 50,000+ professionals who have supercharged their career with ResumeBoost AI.
+            Join 50,000+ professionals who have supercharged their career with ROZGAR 24/7.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/resume-builder"
+              to="/resume-builder"
               className="bg-white text-zinc-900 hover:bg-white/90 hover:scale-[1.03] transition-all duration-300 h-14 rounded-xl px-10 text-base font-semibold inline-flex items-center justify-center whitespace-nowrap shadow-lg"
             >
               Build with AI
             </Link>
             <Link
-              href="/ats-analysis"
+              to="/ats-analysis"
               className="bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 hover:scale-105 h-14 rounded-xl px-10 text-base font-semibold transition-all inline-flex items-center justify-center whitespace-nowrap"
             >
               Analyze My Resume

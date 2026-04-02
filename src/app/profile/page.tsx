@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer"
 import { FileText, BarChart2, Star, Calendar, Mail, User, Edit2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 
 const stats = [
   { label: "Resumes Created", value: "4", icon: FileText, color: "text-indigo-500", bg: "bg-indigo-50 dark:bg-indigo-500/10" },
@@ -53,7 +53,7 @@ export default function ProfilePage() {
               </button>
             </div>
             <Button variant="gradient" size="sm" asChild>
-              <Link href="/resume-builder">+ New Resume</Link>
+              <Link to="/resume-builder">+ New Resume</Link>
             </Button>
           </div>
 
@@ -92,7 +92,7 @@ export default function ProfilePage() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold">My Resumes</h2>
           <Button variant="outline" size="sm" asChild>
-            <Link href="/resume-builder">Create New</Link>
+            <Link to="/resume-builder">Create New</Link>
           </Button>
         </div>
         <div className="rounded-2xl border border-border/60 bg-card overflow-hidden shadow-sm">

@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
 import { 
   LayoutDashboard, 
@@ -27,7 +27,7 @@ const sidebarLinks = [
 ]
 
 export function Sidebar() {
-  const pathname = usePathname()
+  const pathname = useLocation().pathname
   const [collapsed, setCollapsed] = React.useState(false)
 
   // Try to load collapsed state from localStorage on mount
@@ -51,9 +51,9 @@ export function Sidebar() {
         className="hidden md:flex flex-col h-screen fixed left-0 top-0 border-r border-border bg-card z-40 overflow-hidden"
       >
         <div className="flex items-center h-16 px-4 border-b border-border/50 justify-between shrink-0">
-          <Link href="/" className="flex items-center gap-2 overflow-hidden flex-shrink-0">
+          <Link to="/" className="flex items-center gap-2 overflow-hidden flex-shrink-0">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shrink-0">
-              <span className="text-white font-bold text-sm tracking-tight">RB</span>
+              <span className="text-white font-bold text-sm tracking-tight">RZ</span>
             </div>
             {!collapsed && (
               <motion.span 
@@ -62,7 +62,7 @@ export function Sidebar() {
                 transition={{ delay: 0.1 }}
                 className="font-semibold text-lg tracking-tight whitespace-nowrap"
               >
-                ResumeBoost
+                ROZGAR 24/7
               </motion.span>
             )}
           </Link>
@@ -74,7 +74,7 @@ export function Sidebar() {
             const Icon = link.icon
 
             return (
-              <Link key={link.name} href={link.href}>
+              <Link key={link.name} to={link.href}>
                 <div className={cn(
                   "flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all group relative overflow-hidden",
                   isActive 

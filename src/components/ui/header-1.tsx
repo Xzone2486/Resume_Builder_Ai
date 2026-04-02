@@ -6,12 +6,12 @@ import { cn } from '@/lib/utils';
 import { MenuToggleIcon } from '@/components/ui/menu-toggle-icon';
 import { useScroll } from '@/components/ui/use-scroll';
 import { createPortal } from 'react-dom';
-import Link from 'next/link';
+import { Link } from "react-router-dom";
 import { useAuth } from '@/lib/auth-context';
 import { SignInModal } from '@/components/auth/SignInModal';
 import { LogOut, LayoutDashboard, FileText, BarChart2, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from 'next/navigation';
+import { useLocation } from "react-router-dom";
 
 export function Header() {
 	const [open, setOpen] = React.useState(false);
@@ -19,7 +19,7 @@ export function Header() {
 	const scrolled = useScroll(10);
 	const { user, signOut, openModal } = useAuth();
 	const profileRef = React.useRef<HTMLDivElement>(null);
-	const pathname = usePathname();
+	const pathname = useLocation().pathname;
 
 	const links = [
 		{ label: 'Features', href: '/#features' },
@@ -58,80 +58,92 @@ export function Header() {
 						scrolled,
 				})}
 			>
-				<nav className="flex h-16 w-full items-center justify-between px-4 sm:px-8 lg:px-12">
-					<div className="hover:bg-accent rounded-md p-1 md:p-2">
-						<Link href="/" className="flex items-center gap-2 group">
-							<div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md group-hover:scale-105 transition-transform">
-								<span className="text-white font-bold text-sm tracking-tight">RB</span>
+				<nav className="flex h-16 w-full items-center px-4 sm:px-8 lg:px-12">
+					<div className="flex items-center flex-1">
+						{/* Logo */}
+						<Link to="/" className="flex items-center gap-2 group mr-10">
+							<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md group-hover:scale-105 transition-transform">
+								<span className="text-white font-bold text-base tracking-tight">RZ</span>
 							</div>
-							<span className="font-semibold text-lg tracking-tight hidden sm:block">ResumeBoost<span className="text-indigo-600">AI</span></span>
+							<span className="font-semibold text-2xl tracking-tight hidden sm:block text-zinc-900 dark:text-zinc-50">
+								ROZGAR <span className="font-semibold text-indigo-600">24/7</span>
+							</span>
 						</Link>
+
+						{/* Links grouped next to Logo */}
+						<div className="hidden items-center gap-8 md:flex">
+							{links.map((link) => (
+								<Link 
+									key={link.label} 
+									className={cn(
+										"text-[15px] font-medium text-slate-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5", 
+										pathname === link.href && "text-indigo-600 dark:text-indigo-400"
+									)} 
+									to={link.href}
+								>
+									{link.label}
+								</Link>
+							))}
+						</div>
 					</div>
 
-					<div className="hidden items-center gap-2 md:flex">
-						{links.map((link) => (
-							<Link key={link.label} className={cn(buttonVariants({ variant: 'ghost' }), pathname === link.href && "bg-accent")} href={link.href}>
-								{link.label}
-							</Link>
-						))}
+					{/* Global Right Actions */}
+					<div className="hidden ml-auto md:flex items-center gap-4">
+						{user ? (
+							<div className="relative" ref={profileRef}>
+								<button
+									onClick={() => setProfileOpen(!profileOpen)}
+									className="flex items-center gap-2 pl-1 pr-3 py-1.5 rounded-full border border-border hover:border-indigo-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
+								>
+									<img src={user.avatar} className="w-7 h-7 rounded-full bg-zinc-100 dark:bg-zinc-800" alt={user.name} />
+									<span className="text-sm font-medium hidden sm:block max-w-[120px] truncate">{user.name}</span>
+									<ChevronDown className={`w-3.5 h-3.5 text-muted-foreground transition-transform ${profileOpen ? "rotate-180" : ""}`} />
+								</button>
 
-						<div className="ml-4 flex items-center gap-3">
-							{user ? (
-								<div className="relative" ref={profileRef}>
-									<button
-										onClick={() => setProfileOpen(!profileOpen)}
-										className="flex items-center gap-2 pl-1 pr-3 py-1 rounded-full border border-border hover:border-indigo-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
-									>
-										<img src={user.avatar} className="w-7 h-7 rounded-full bg-zinc-100 dark:bg-zinc-800" alt={user.name} />
-										<span className="text-sm font-medium hidden sm:block max-w-[120px] truncate">{user.name}</span>
-										<ChevronDown className={`w-3.5 h-3.5 text-muted-foreground transition-transform ${profileOpen ? "rotate-180" : ""}`} />
-									</button>
-
-									<AnimatePresence>
-										{profileOpen && (
-											<motion.div
-												initial={{ opacity: 0, y: 8, scale: 0.96 }}
-												animate={{ opacity: 1, y: 0, scale: 1 }}
-												exit={{ opacity: 0, y: 8, scale: 0.96 }}
-												className="absolute right-0 top-full mt-2 w-56 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-xl py-2 z-50"
-											>
-												<div className="px-4 py-2.5 border-b border-zinc-100 dark:border-zinc-800 mb-1">
-													<p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
-													<p className="text-xs text-muted-foreground truncate">{user.email}</p>
-												</div>
-												{[
-													{ icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-													{ icon: FileText, label: "My Resumes", href: "/profile" },
-													{ icon: BarChart2, label: "ATS Analysis", href: "/ats-analysis" },
-												].map(({ icon: Icon, label, href }) => (
-													<Link
-														key={href}
-														href={href}
-														onClick={() => setProfileOpen(false)}
-														className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
-													>
-														<Icon className="w-4 h-4 text-muted-foreground" /> {label}
-													</Link>
-												))}
-												<div className="border-t border-zinc-100 mt-1 pt-1">
-													<button
-														onClick={() => { signOut(); setProfileOpen(false) }}
-														className="flex items-center gap-3 px-4 py-2 w-full text-sm text-rose-500 hover:bg-rose-50 transition-colors"
-													>
-														<LogOut className="w-4 h-4" /> Sign Out
-													</button>
-												</div>
-											</motion.div>
-										)}
-									</AnimatePresence>
-								</div>
-							) : (
-								<>
-									<Button variant="outline" onClick={openModal}>Sign In</Button>
-									<Button variant="gradient" onClick={openModal}>Get Started</Button>
-								</>
-							)}
-						</div>
+								<AnimatePresence>
+									{profileOpen && (
+										<motion.div
+											initial={{ opacity: 0, y: 8, scale: 0.96 }}
+											animate={{ opacity: 1, y: 0, scale: 1 }}
+											exit={{ opacity: 0, y: 8, scale: 0.96 }}
+											className="absolute right-0 top-full mt-2 w-56 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-xl py-2 z-50"
+										>
+											<div className="px-4 py-2.5 border-b border-zinc-100 dark:border-zinc-800 mb-1">
+												<p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
+												<p className="text-xs text-muted-foreground truncate">{user.email}</p>
+											</div>
+											{[
+												{ icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
+												{ icon: FileText, label: "My Resumes", href: "/profile" },
+												{ icon: BarChart2, label: "ATS Analysis", href: "/ats-analysis" },
+											].map(({ icon: Icon, label, href }) => (
+												<Link
+													key={href}
+													to={href}
+													onClick={() => setProfileOpen(false)}
+													className="flex items-center gap-3 px-4 py-2 text-sm text-foreground hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+												>
+													<Icon className="w-4 h-4 text-muted-foreground" /> {label}
+												</Link>
+											))}
+											<div className="border-t border-zinc-100 mt-1 pt-1">
+												<button
+													onClick={() => { signOut(); setProfileOpen(false) }}
+													className="flex items-center gap-3 px-4 py-2 w-full text-sm text-rose-500 hover:bg-rose-50 transition-colors"
+												>
+													<LogOut className="w-4 h-4" /> Sign Out
+												</button>
+											</div>
+										</motion.div>
+									)}
+								</AnimatePresence>
+							</div>
+						) : (
+							<>
+								<Button className="font-medium" variant="outline" onClick={openModal}>Sign In</Button>
+								<Button variant="gradient" className="font-medium shadow-sm" onClick={openModal}>Get Started</Button>
+							</>
+						)}
 					</div>
 
 					<Button
@@ -156,7 +168,7 @@ export function Header() {
 									variant: 'ghost',
 									className: 'justify-start',
 								}), pathname === link.href && "bg-accent")}
-								href={link.href}
+								to={link.href}
 								onClick={() => setOpen(false)}
 							>
 								{link.label}
@@ -170,7 +182,7 @@ export function Header() {
 						].map(({ icon: Icon, label, href }) => (
 							<Link
 								key={href}
-								href={href}
+								to={href}
 								onClick={() => setOpen(false)}
 								className={cn(buttonVariants({
 									variant: 'ghost',

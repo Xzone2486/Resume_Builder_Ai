@@ -3,11 +3,10 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import dynamic from 'next/dynamic'
-import SoftAurora from "./SoftAurora"
+import { Link } from "react-router-dom"
+import FloatingClouds from "./FloatingClouds"
 
-const HeroCanvas = dynamic(() => import("./HeroCanvas"), { ssr: false, loading: () => <div className="w-full h-[500px] lg:h-[700px] animate-pulse rounded-2xl bg-indigo-500/10" /> })
+const HeroCanvas = React.lazy(() => import("./HeroCanvas"))
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,24 +23,9 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-start pt-0 pb-12 overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <SoftAurora
-          speed={0.6}
-          scale={1.5}
-          brightness={1}
-          color1="#f7f7f7"
-          color2="#8b5cf6"
-          noiseFrequency={2.5}
-          noiseAmplitude={1}
-          bandHeight={0.5}
-          bandSpread={1}
-          octaveDecay={0.1}
-          layerOffset={0}
-          colorSpeed={1}
-          enableMouseInteraction
-          mouseInfluence={0.25}
-        />
+    <section className="relative min-h-[75vh] flex items-start pt-0 pb-12 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+        <FloatingClouds />
       </div>
       <div className="container px-6 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -76,10 +60,10 @@ export function Hero() {
             {/* CTA Buttons */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12">
               <Button variant="gradient" size="xl" asChild>
-                <Link href="/ats-analysis">Analyze My Resume</Link>
+                <Link to="/ats-analysis">Analyze My Resume</Link>
               </Button>
               <Button variant="glass" size="xl" asChild>
-                <Link href="/resume-builder">Build with AI</Link>
+                <Link to="/resume-builder">Build with AI</Link>
               </Button>
             </motion.div>
 
@@ -92,13 +76,15 @@ export function Hero() {
                   </div>
                 ))}
               </div>
-              <p>Join <strong className="text-foreground">50,000+</strong> professionals hired at top tech companies.</p>
+              <p>Join <strong className="text-foreground">3,546+</strong> users who landed interviews last month.</p>
             </motion.div>
           </motion.div> 
 
           {/* Right Side 3D Canvas */}
-          <div className="w-full h-[500px] lg:h-[700px] relative">
-            <HeroCanvas />
+          <div className="w-full h-[500px] lg:h-[600px] relative">
+            <React.Suspense fallback={<div className="w-full h-[100%] animate-pulse rounded-2xl bg-indigo-500/10" />}>
+              <HeroCanvas />
+            </React.Suspense>
           </div>
 
         </div>

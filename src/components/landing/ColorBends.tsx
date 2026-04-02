@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import dynamic from 'next/dynamic'
 
 const MAX_COLORS = 8
 
@@ -200,7 +199,7 @@ function ColorBendsInner({
 
     handleResize()
 
-    if ('ResizeObserver' in window) {
+    if (typeof ResizeObserver !== 'undefined') {
       const ro = new ResizeObserver(handleResize)
       ro.observe(container)
       resizeObserverRef.current = ro
@@ -303,4 +302,4 @@ function ColorBendsInner({
   )
 }
 
-export default dynamic(() => Promise.resolve(ColorBendsInner), { ssr: false })
+export default ColorBendsInner

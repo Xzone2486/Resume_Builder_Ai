@@ -19,12 +19,12 @@ export function EliteResumeTools() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="group col-span-1 md:col-span-2 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 md:col-span-2 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px] flex flex-col items-end"
       >
-        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">ATS Resume Analyzer</h3>
+        <h3 className="text-xl md:text-2xl font-extrabold text-zinc-900 group-hover:text-white transition-colors duration-500 z-20 relative text-right">ATS Resume Analyzer</h3>
         
-        {/* Mockup UI */}
-        <div className="absolute right-0 md:right-[-20px] bottom-[-20px] w-[320px] md:w-[420px] bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-t-xl rounded-bl-xl shadow-xl border border-violet-100 p-6 transform translate-x-4 md:translate-x-0">
+        {/* Mockup UI - Shifted to the Left */}
+        <div className="absolute left-0 md:left-[-20px] bottom-[-20px] w-[320px] md:w-[420px] bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-t-xl rounded-br-xl shadow-xl border border-violet-100 p-6 transform translate-x-[-16px] md:translate-x-0 z-10">
           
           <div className="flex gap-6 items-center mb-6">
             {/* Score Gauge */}
@@ -64,7 +64,7 @@ export function EliteResumeTools() {
           </div>
 
           {/* Floating Indicator */}
-          <FloatingPill className="absolute right-4 top-[-10px] z-20 shadow-lg hidden md:flex">
+          <FloatingPill className="absolute left-4 top-[-10px] z-20 shadow-lg hidden md:flex">
             <CheckCircle2 className="w-5 h-5 text-emerald-500" />
             <span className="text-xs font-bold text-zinc-800">ATS Passed</span>
           </FloatingPill>

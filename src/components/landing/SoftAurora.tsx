@@ -137,31 +137,12 @@ void main() {
     shift = (uMouse - 0.5) * uMouseInfluence;
   }
 
-  float glow1 = auroraGlow(t, shift);
-  float glow2 = auroraGlow(t + uLayerOffset, shift);
-
-  vec3 baseColor1 = cosineGradient(uv.x + uTime * uSpeed * 0.2 * uColorSpeed, vec3(0.5), vec3(0.5), vec3(1.0), vec3(0.3, 0.20, 0.20)) * uColor1;
-  vec3 baseColor2 = cosineGradient(uv.x + uTime * uSpeed * 0.1 * uColorSpeed, vec3(0.5), vec3(0.5), vec3(2.0, 1.0, 0.0), vec3(0.5, 0.20, 0.25)) * uColor2;
-
-  float totalGlow = glow1 + glow2;
   vec3 col = vec3(0.0);
-  
-  if (totalGlow > 0.0) {
-    col = (baseColor1 * glow1 + baseColor2 * glow2) / totalGlow;
-    
-    // Completely remove any shadow/darkness by forcing the color to be fully bright (pastel/neon).
-    // This takes whatever hue it computed and pushes it to maximum brightness.
-    float maxCol = max(col.r, max(col.g, col.b));
-    if (maxCol > 0.001) {
-      col = col / maxCol;
-      // Soften the pure neon a tiny bit to make it match a clean light theme
-      col = mix(vec3(1.0), col, 0.85);
-    } else {
-      col = vec3(1.0);
-    }
-  }
-  
-  float alpha = clamp(totalGlow * uBrightness, 0.0, 1.0);
+  col += 0.99 * auroraGlow(t, shift) * cosineGradient(uv.x + uTime * uSpeed * 0.2 * uColorSpeed, vec3(0.5), vec3(0.5), vec3(1.0), vec3(0.3, 0.20, 0.20)) * uColor1;
+  col += 0.99 * auroraGlow(t + uLayerOffset, shift) * cosineGradient(uv.x + uTime * uSpeed * 0.1 * uColorSpeed, vec3(0.5), vec3(0.5), vec3(2.0, 1.0, 0.0), vec3(0.5, 0.20, 0.25)) * uColor2;
+
+  col *= uBrightness;
+  float alpha = clamp(length(col), 0.0, 1.0);
   gl_FragColor = vec4(col, alpha);
 }
 `;

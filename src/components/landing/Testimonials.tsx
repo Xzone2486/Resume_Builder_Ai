@@ -226,7 +226,7 @@ export function Testimonials() {
             <span className="text-gradient">Industry Leaders</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don&apos;t just take our word for it — hear from the executives, engineers, and leaders who landed their dream roles with ResumeBoost AI.
+            Don&apos;t just take our word for it — hear from the executives, engineers, and leaders who landed their dream roles with ROZGAR 24/7.
           </p>
         </motion.div>
       </div>
