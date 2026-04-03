@@ -90,7 +90,7 @@ const resumeTemplates: Template[] = [
     tags: ["Python", "ML/AI", "Statistics"],
   },
   {
-    name: "Student Resume v1",
+    name: "Business Analyst Intern",
     role: "Fresher / Intern",
     level: "Entry Level",
     category: "Student",
@@ -104,7 +104,7 @@ const resumeTemplates: Template[] = [
     tags: ["Internship", "Projects", "Academics"],
   },
   {
-    name: "Student Resume v2",
+    name: "Software Engineer",
     role: "Fresher / Intern",
     level: "Entry Level",
     category: "Student",
@@ -118,7 +118,7 @@ const resumeTemplates: Template[] = [
     tags: ["Campus", "Skills", "Leadership"],
   },
   {
-    name: "Student Resume v3",
+    name: "Research Assistant",
     role: "Fresher / Intern",
     level: "Entry Level",
     category: "Student",
@@ -132,7 +132,7 @@ const resumeTemplates: Template[] = [
     tags: ["Research", "Projects", "GPA"],
   },
   {
-    name: "Student Resume v4",
+    name: "Mechanical Engineer",
     role: "Fresher / Intern",
     level: "Entry Level",
     category: "Student",
