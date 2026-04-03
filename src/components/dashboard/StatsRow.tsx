@@ -64,7 +64,6 @@ export function StatsRow() {
 const colorMap: Record<string, { bg: string; border: string; icon: string; value: string; trend: string }> = {
   blue:   { bg: "bg-blue-50/70",   border: "border-blue-200/60",   icon: "bg-blue-100",   value: "text-blue-900",   trend: "text-blue-700" },
   green:  { bg: "bg-green-50/70",  border: "border-green-200/60",  icon: "bg-green-100",  value: "text-green-900",  trend: "text-green-700" },
-  blue: { bg: "bg-blue-50/70", border: "border-blue-200/60", icon: "bg-blue-100", value: "text-blue-900", trend: "text-blue-700" },
   orange: { bg: "bg-orange-50/70", border: "border-orange-200/60", icon: "bg-orange-100", value: "text-orange-900", trend: "text-orange-700" },
 }
 
