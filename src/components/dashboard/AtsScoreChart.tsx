@@ -31,8 +31,8 @@ export function AtsScoreChart() {
         >
           <defs>
             <linearGradient id="colorScore" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.8}/>
-              <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#14b8a6" stopOpacity={0.8}/>
+              <stop offset="95%" stopColor="#14b8a6" stopOpacity={0}/>
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="currentColor" className="opacity-10 dark:opacity-5 text-border" />
@@ -55,7 +55,7 @@ export function AtsScoreChart() {
                 return (
                   <div className="glass-card bg-background/90 p-3 rounded-xl border border-border shadow-lg hidden group-hover:block">
                     <p className="font-medium text-sm text-muted-foreground mb-1">{payload[0].payload.date}</p>
-                    <p className="text-2xl font-bold flex items-center gap-2 text-indigo-600 dark:text-indigo-400">
+                    <p className="text-2xl font-bold flex items-center gap-2 text-teal-600 dark:text-teal-400">
                       {payload[0].value} <span className="text-xs font-normal text-muted-foreground">score</span>
                     </p>
                   </div>
@@ -67,12 +67,12 @@ export function AtsScoreChart() {
           <Area 
             type="monotone" 
             dataKey="score" 
-            stroke="#8b5cf6" 
+            stroke="#14b8a6" 
             strokeWidth={3}
             fillOpacity={1} 
             fill="url(#colorScore)" 
             animationDuration={2000}
-            activeDot={{ r: 6, fill: "#8b5cf6", stroke: "#fff", strokeWidth: 2 }}
+            activeDot={{ r: 6, fill: "#14b8a6", stroke: "#fff", strokeWidth: 2 }}
           />
         </AreaChart>
       </ResponsiveContainer>
@@ -82,10 +82,10 @@ export function AtsScoreChart() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-10 right-20 bg-indigo-500 text-white text-[10px] font-bold px-2 py-1 rounded hidden sm:block"
+        className="absolute bottom-10 right-20 bg-teal-500 text-white text-[10px] font-bold px-2 py-1 rounded hidden sm:block"
       >
         AI Enhanced
-        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-indigo-500 rotate-45" />
+        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-teal-500 rotate-45" />
       </motion.div>
     </div>
   )

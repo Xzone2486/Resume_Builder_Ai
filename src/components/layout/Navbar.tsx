@@ -51,10 +51,10 @@ export function Navbar() {
           <div className="flex items-center gap-8 lg:gap-12">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md group-hover:scale-105 transition-transform">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-teal-600 shadow-md group-hover:scale-105 transition-transform">
                 <span className="text-white font-bold text-sm tracking-tight">RZ</span>
               </div>
-              <span className="font-semibold text-lg tracking-tight hidden sm:block">ROZGAR <span className="text-indigo-600">24/7</span></span>
+              <span className="font-semibold text-lg tracking-tight hidden sm:block">ROZGAR <span className="text-teal-600">24/7</span></span>
             </Link>
 
             {/* Desktop Nav */}
@@ -66,7 +66,7 @@ export function Navbar() {
                   className="relative text-[15px] font-bold text-muted-foreground hover:text-foreground transition-colors group px-1 py-1.5"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 rounded-full transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 rounded-full transition-all duration-300 group-hover:w-full" />
                 </Link>
               ))}
             </nav>
@@ -78,7 +78,7 @@ export function Navbar() {
               <div className="relative" ref={profileRef}>
                 <button
                   onClick={() => setProfileOpen(!profileOpen)}
-                  className="flex items-center gap-2 pl-1 pr-3 py-1.5 rounded-full border border-border hover:border-indigo-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
+                  className="flex items-center gap-2 pl-1 pr-3 py-1.5 rounded-full border border-border hover:border-teal-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
                 >
                   <img src={user.avatar} className="w-7 h-7 rounded-full bg-zinc-100 dark:bg-zinc-800" alt={user.name} />
                   <span className="text-[15px] font-bold hidden sm:block max-w-[120px] truncate">{user.name}</span>
@@ -154,7 +154,7 @@ export function Navbar() {
               animate={mobileMenuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ delay: mobileMenuOpen ? i * 0.07 : 0 }}
             >
-              <Link to={link.href} className="text-2xl font-semibold hover:text-indigo-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              <Link to={link.href} className="text-2xl font-semibold hover:text-teal-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 {link.name}
               </Link>
             </motion.div>

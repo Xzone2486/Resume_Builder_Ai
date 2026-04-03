@@ -69,25 +69,25 @@ export default function AtsAnalysisPage() {
   }
 
   return (
-    <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col selection:bg-indigo-500/30 bg-hero-gradient">
+    <main className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col selection:bg-teal-500/30 bg-hero-gradient">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
-        <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] bg-violet-500/[0.03] blur-[100px] rounded-full animate-blob pointer-events-none" />
-        <div className="absolute top-[30%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/[0.02] blur-[100px] rounded-full animate-blob animation-delay-2000 pointer-events-none" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-purple-500/[0.02] blur-[120px] rounded-full animate-blob animation-delay-4000 pointer-events-none" />
+        <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] bg-blue-500/[0.03] blur-[100px] rounded-full animate-blob pointer-events-none" />
+        <div className="absolute top-[30%] right-[-10%] w-[400px] h-[400px] bg-teal-500/[0.02] blur-[100px] rounded-full animate-blob animation-delay-2000 pointer-events-none" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-cyan-500/[0.02] blur-[120px] rounded-full animate-blob animation-delay-4000 pointer-events-none" />
         <div className="absolute top-[60%] right-[10%] w-[300px] h-[300px] bg-blue-500/[0.02] blur-[80px] rounded-full animate-float-slow pointer-events-none" />
 
         {/* Floating accent circles */}
-        <div className="absolute top-[15%] left-[5%] w-3 h-3 bg-indigo-400/[0.08] rounded-full animate-float hidden lg:block" />
-        <div className="absolute top-[25%] left-[3%] w-2 h-2 bg-violet-400/[0.1] rounded-full animate-float animation-delay-2000 hidden lg:block" />
-        <div className="absolute top-[45%] left-[2%] w-4 h-4 bg-purple-400/[0.06] rounded-full animate-float-slow hidden lg:block" />
-        <div className="absolute top-[20%] right-[3%] w-3 h-3 bg-indigo-400/[0.08] rounded-full animate-float animation-delay-4000 hidden lg:block" />
-        <div className="absolute top-[60%] right-[5%] w-2 h-2 bg-violet-400/[0.1] rounded-full animate-float-slow animation-delay-2000 hidden lg:block" />
+        <div className="absolute top-[15%] left-[5%] w-3 h-3 bg-teal-400/[0.08] rounded-full animate-float hidden lg:block" />
+        <div className="absolute top-[25%] left-[3%] w-2 h-2 bg-blue-400/[0.1] rounded-full animate-float animation-delay-2000 hidden lg:block" />
+        <div className="absolute top-[45%] left-[2%] w-4 h-4 bg-cyan-400/[0.06] rounded-full animate-float-slow hidden lg:block" />
+        <div className="absolute top-[20%] right-[3%] w-3 h-3 bg-teal-400/[0.08] rounded-full animate-float animation-delay-4000 hidden lg:block" />
+        <div className="absolute top-[60%] right-[5%] w-2 h-2 bg-blue-400/[0.1] rounded-full animate-float-slow animation-delay-2000 hidden lg:block" />
 
         {/* Side gradient glows */}
-        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-violet-500/[0.02] to-transparent pointer-events-none" />
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-indigo-500/[0.02] to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-blue-500/[0.02] to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-teal-500/[0.02] to-transparent pointer-events-none" />
       </div>
 
       <Header />
@@ -106,7 +106,7 @@ export default function AtsAnalysisPage() {
             >
               {/* Header */}
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-medium mb-4 border border-indigo-500/20">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 text-sm font-medium mb-4 border border-teal-500/20">
                   <Zap className="w-4 h-4" /> AI-Powered ATS Scanner
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -126,10 +126,10 @@ export default function AtsAnalysisPage() {
                   onClick={() => fileInputRef.current?.click()}
                   className={`relative flex flex-col items-center justify-center gap-4 h-64 rounded-3xl border-2 border-dashed cursor-pointer transition-all duration-300 select-none ${
                     dragOver
-                      ? "border-indigo-500 bg-indigo-500/5 scale-[1.01]"
+                      ? "border-teal-500 bg-teal-500/5 scale-[1.01]"
                       : file
                       ? "border-green-500 bg-green-500/5"
-                      : "border-border bg-card hover:border-indigo-400 hover:bg-indigo-500/5"
+                      : "border-border bg-card hover:border-teal-400 hover:bg-teal-500/5"
                   }`}
                 >
                   <input
@@ -160,8 +160,8 @@ export default function AtsAnalysisPage() {
                     </>
                   ) : (
                     <>
-                      <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center">
-                        <FileUp className="w-7 h-7 text-indigo-500" />
+                      <div className="w-14 h-14 rounded-2xl bg-teal-500/10 flex items-center justify-center">
+                        <FileUp className="w-7 h-7 text-teal-500" />
                       </div>
                       <div className="text-center">
                         <p className="font-semibold text-foreground">Drop your resume here</p>
@@ -182,7 +182,7 @@ export default function AtsAnalysisPage() {
                     value={jobRole}
                     onChange={(e) => setJobRole(e.target.value)}
                     placeholder="e.g. Senior Frontend Engineer at Google"
-                    className="w-full h-11 rounded-xl border border-border bg-card px-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                    className="w-full h-11 rounded-xl border border-border bg-card px-4 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50 transition-all"
                   />
                 </div>
 
@@ -220,9 +220,9 @@ export default function AtsAnalysisPage() {
             >
               {/* Pulsing orb */}
               <div className="relative flex items-center justify-center">
-                <div className="absolute w-40 h-40 rounded-full bg-indigo-500/20 animate-ping" />
-                <div className="absolute w-28 h-28 rounded-full bg-indigo-500/30 animate-pulse" />
-                <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-xl shadow-indigo-500/40">
+                <div className="absolute w-40 h-40 rounded-full bg-teal-500/20 animate-ping" />
+                <div className="absolute w-28 h-28 rounded-full bg-teal-500/30 animate-pulse" />
+                <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center shadow-xl shadow-teal-500/40">
                   <Loader2 className="w-8 h-8 text-white animate-spin" />
                 </div>
               </div>
@@ -236,7 +236,7 @@ export default function AtsAnalysisPage() {
               <div className="w-full max-w-sm space-y-3">
                 <div className="h-2.5 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-violet-600 to-indigo-500 rounded-full"
+                    className="h-full bg-gradient-to-r from-blue-600 to-teal-500 rounded-full"
                     initial={{ width: "0%" }}
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -291,7 +291,7 @@ export default function AtsAnalysisPage() {
                   <p className="text-muted-foreground flex items-center gap-2 text-sm">
                     <FileText className="w-4 h-4" />
                     {file?.name ?? "resume.pdf"}
-                    {jobRole && <> · <span className="text-indigo-500">{jobRole}</span></>}
+                    {jobRole && <> · <span className="text-teal-500">{jobRole}</span></>}
                   </p>
                 </div>
                 <div className="flex gap-3">
@@ -310,7 +310,7 @@ export default function AtsAnalysisPage() {
               {/* Score + Breakdown */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                 <div className="glass-card rounded-3xl border border-border flex flex-col items-center justify-center p-8 lg:col-span-1 shadow-sm relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl" />
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl" />
                   <ScoreGauge score={94} />
                 </div>
                 <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">

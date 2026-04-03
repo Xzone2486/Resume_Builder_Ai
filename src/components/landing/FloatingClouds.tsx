@@ -28,21 +28,21 @@ export default function FloatingClouds() {
        
        {/* 4. New Theme Indigo */}
        <motion.div
-         className="absolute w-[700px] h-[350px] bg-indigo-500/25 rounded-[100%] blur-[110px]"
+         className="absolute w-[700px] h-[350px] bg-teal-500/25 rounded-[100%] blur-[110px]"
          animate={{ x: ["-110vw", "110vw"] }}
          transition={{ duration: 30, repeat: Infinity, ease: "linear", delay: 1 }}
          style={{ top: "15%" }}
        />
        {/* 5. New Theme Violet */}
        <motion.div
-         className="absolute w-[850px] h-[450px] bg-violet-500/25 rounded-[100%] blur-[130px]"
+         className="absolute w-[850px] h-[450px] bg-blue-500/25 rounded-[100%] blur-[130px]"
          animate={{ x: ["-130vw", "130vw"] }}
          transition={{ duration: 42, repeat: Infinity, ease: "linear", delay: 15 }}
          style={{ top: "50%" }}
        />
        {/* 6. New Theme Teal/Indigo Mix */}
        <motion.div
-         className="absolute w-[450px] h-[250px] bg-indigo-400/35 rounded-[100%] blur-[90px]"
+         className="absolute w-[450px] h-[250px] bg-teal-400/35 rounded-[100%] blur-[90px]"
          animate={{ x: ["-70vw", "120vw"] }}
          transition={{ duration: 32, repeat: Infinity, ease: "linear", delay: 5 }}
          style={{ top: "65%" }}

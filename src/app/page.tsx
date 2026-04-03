@@ -13,7 +13,7 @@ import LineWaves from "@/components/landing/LineWaves";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col selection:bg-indigo-500/30 relative">
+    <main className="min-h-screen flex flex-col selection:bg-teal-500/30 relative">
 
       <Header />
       

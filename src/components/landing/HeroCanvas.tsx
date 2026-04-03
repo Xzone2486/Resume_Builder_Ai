@@ -95,7 +95,7 @@ function FloatingResume({ hovered, currentImg }: { hovered: boolean; currentImg:
   })
 
   const blocks = [
-    { y: 1.0, w: 1.2, h: 0.12, c: '#4f46e5' },
+    { y: 1.0, w: 1.2, h: 0.12, c: '#1d4ed8' },
     { y: 0.6, w: 0.7, h: 0.07, c: '#a1a1aa' },
     { y: 0.2, w: 1.6, h: 0.04, c: '#d4d4d8' },
     { y: 0.0, w: 1.4, h: 0.04, c: '#d4d4d8' },

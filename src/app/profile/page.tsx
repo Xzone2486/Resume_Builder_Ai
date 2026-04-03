@@ -10,10 +10,10 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
 const stats = [
-  { label: "Resumes Created", value: "4", icon: FileText, color: "text-indigo-500", bg: "bg-indigo-50 dark:bg-indigo-500/10" },
+  { label: "Resumes Created", value: "4", icon: FileText, color: "text-teal-500", bg: "bg-teal-50 dark:bg-teal-500/10" },
   { label: "Avg ATS Score", value: "76%", icon: BarChart2, color: "text-green-500", bg: "bg-green-50 dark:bg-green-500/10" },
   { label: "Top Score", value: "94%", icon: Star, color: "text-amber-500", bg: "bg-amber-50 dark:bg-amber-500/10" },
-  { label: "Member Since", value: "Mar 2026", icon: Calendar, color: "text-violet-500", bg: "bg-violet-50 dark:bg-violet-500/10" },
+  { label: "Member Since", value: "Mar 2026", icon: Calendar, color: "text-blue-500", bg: "bg-blue-50 dark:bg-blue-500/10" },
 ]
 
 export default function ProfilePage() {
@@ -34,7 +34,7 @@ export default function ProfilePage() {
         className="glass-card rounded-2xl border border-border/60 overflow-hidden"
       >
         {/* Banner */}
-        <div className="h-28 bg-gradient-to-r from-violet-600 to-indigo-600 relative">
+        <div className="h-28 bg-gradient-to-r from-blue-600 to-teal-600 relative">
           <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         </div>
 
@@ -48,7 +48,7 @@ export default function ProfilePage() {
                 alt="avatar"
                 className="w-20 h-20 rounded-2xl border-4 border-background bg-zinc-100 shadow-lg"
               />
-              <button className="absolute -bottom-1 -right-1 w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center border-2 border-background hover:bg-indigo-700 transition-colors">
+              <button className="absolute -bottom-1 -right-1 w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center border-2 border-background hover:bg-teal-700 transition-colors">
                 <Edit2 className="w-3 h-3 text-white" />
               </button>
             </div>

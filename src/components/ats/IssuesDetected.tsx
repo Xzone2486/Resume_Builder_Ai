@@ -31,7 +31,7 @@ export function IssuesDetected() {
           <AlertCircle className="w-5 h-5 text-rose-500" />
           Issues Detected
         </h3>
-        <span className="bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-400 px-3 py-1 rounded-full text-xs font-bold">
+        <span className="bg-teal-100 text-teal-700 dark:bg-teal-500/20 dark:text-teal-400 px-3 py-1 rounded-full text-xs font-bold">
           {remainingCount} Remaining
         </span>
       </div>
@@ -55,7 +55,7 @@ export function IssuesDetected() {
                 className={`p-4 rounded-xl border transition-all ${
                   issue.fixed 
                     ? "bg-zinc-50 dark:bg-zinc-900/50 border-border opacity-60 grayscale-[0.5]" 
-                    : "bg-card border-border hover:shadow-md hover:border-indigo-500/30"
+                    : "bg-card border-border hover:shadow-md hover:border-teal-500/30"
                 }`}
               >
                 <div className="flex items-start justify-between gap-4">
@@ -83,7 +83,7 @@ export function IssuesDetected() {
                         <RotateCcw className="w-3 h-3 mr-1" /> Undo
                       </Button>
                     ) : (
-                      <Button variant="outline" size="sm" onClick={() => fixIssue(issue.id)} className="h-8 text-[11px] font-semibold border-indigo-200 dark:border-indigo-500/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/20">
+                      <Button variant="outline" size="sm" onClick={() => fixIssue(issue.id)} className="h-8 text-[11px] font-semibold border-teal-200 dark:border-teal-500/30 text-teal-600 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-500/20">
                         <Sparkles className="w-3 h-3 mr-1" /> Fix with AI
                       </Button>
                     )}

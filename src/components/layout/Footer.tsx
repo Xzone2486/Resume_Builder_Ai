@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-50 dark:bg-zinc-950 border-t border-border pt-16 pb-8 relative overflow-hidden">
       {/* Decorative Blob */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/5 dark:bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-500/5 dark:bg-teal-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="container px-6 mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -15,10 +15,10 @@ export function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
              <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-teal-600 shadow-md">
                 <span className="text-white font-bold text-sm tracking-tight">RZ</span>
               </div>
-              <span className="font-semibold text-lg tracking-tight">ROZGAR <span className="text-indigo-600 dark:text-indigo-400">24/7</span></span>
+              <span className="font-semibold text-lg tracking-tight">ROZGAR <span className="text-teal-600 dark:text-teal-400">24/7</span></span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
               Silicon Valley-tier AI SaaS to optimize your resume. Build, analyze, and land your dream job faster.
@@ -43,10 +43,10 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
-              <li><Link to="/resume-builder" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Resume Builder</Link></li>
-              <li><Link to="/ats-analysis" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ATS Checker</Link></li>
-              <li><Link to="/pricing" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pricing</Link></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Templates</a></li>
+              <li><Link to="/resume-builder" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Resume Builder</Link></li>
+              <li><Link to="/ats-analysis" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">ATS Checker</Link></li>
+              <li><Link to="/pricing" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Pricing</Link></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Templates</a></li>
             </ul>
           </div>
 
@@ -54,10 +54,10 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Career Advice</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Resume Examples</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Help Center</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Blog</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Career Advice</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Resume Examples</a></li>
+              <li><a href="#" className="text-sm text-muted-foreground hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Help Center</a></li>
             </ul>
           </div>
 

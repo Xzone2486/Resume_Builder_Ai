@@ -88,21 +88,21 @@ export default function PricingPage() {
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
-        <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] bg-violet-500/[0.03] blur-[100px] rounded-full animate-blob pointer-events-none" />
-        <div className="absolute top-[30%] right-[-10%] w-[400px] h-[400px] bg-indigo-500/[0.02] blur-[100px] rounded-full animate-blob animation-delay-2000 pointer-events-none" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-purple-500/[0.02] blur-[120px] rounded-full animate-blob animation-delay-4000 pointer-events-none" />
+        <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] bg-blue-500/[0.03] blur-[100px] rounded-full animate-blob pointer-events-none" />
+        <div className="absolute top-[30%] right-[-10%] w-[400px] h-[400px] bg-teal-500/[0.02] blur-[100px] rounded-full animate-blob animation-delay-2000 pointer-events-none" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-cyan-500/[0.02] blur-[120px] rounded-full animate-blob animation-delay-4000 pointer-events-none" />
         <div className="absolute top-[60%] right-[10%] w-[300px] h-[300px] bg-blue-500/[0.02] blur-[80px] rounded-full animate-float-slow pointer-events-none" />
 
         {/* Floating accent circles */}
-        <div className="absolute top-[15%] left-[5%] w-3 h-3 bg-indigo-400/[0.08] rounded-full animate-float hidden lg:block" />
-        <div className="absolute top-[25%] left-[3%] w-2 h-2 bg-violet-400/[0.1] rounded-full animate-float animation-delay-2000 hidden lg:block" />
-        <div className="absolute top-[45%] left-[2%] w-4 h-4 bg-purple-400/[0.06] rounded-full animate-float-slow hidden lg:block" />
-        <div className="absolute top-[20%] right-[3%] w-3 h-3 bg-indigo-400/[0.08] rounded-full animate-float animation-delay-4000 hidden lg:block" />
-        <div className="absolute top-[60%] right-[5%] w-2 h-2 bg-violet-400/[0.1] rounded-full animate-float-slow animation-delay-2000 hidden lg:block" />
+        <div className="absolute top-[15%] left-[5%] w-3 h-3 bg-teal-400/[0.08] rounded-full animate-float hidden lg:block" />
+        <div className="absolute top-[25%] left-[3%] w-2 h-2 bg-blue-400/[0.1] rounded-full animate-float animation-delay-2000 hidden lg:block" />
+        <div className="absolute top-[45%] left-[2%] w-4 h-4 bg-cyan-400/[0.06] rounded-full animate-float-slow hidden lg:block" />
+        <div className="absolute top-[20%] right-[3%] w-3 h-3 bg-teal-400/[0.08] rounded-full animate-float animation-delay-4000 hidden lg:block" />
+        <div className="absolute top-[60%] right-[5%] w-2 h-2 bg-blue-400/[0.1] rounded-full animate-float-slow animation-delay-2000 hidden lg:block" />
 
         {/* Side gradient glows */}
-        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-violet-500/[0.02] to-transparent pointer-events-none" />
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-indigo-500/[0.02] to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-blue-500/[0.02] to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-teal-500/[0.02] to-transparent pointer-events-none" />
       </div>
 
       <Header />
@@ -110,10 +110,10 @@ export default function PricingPage() {
       <div className="flex-1 w-full flex flex-col items-center pt-32 pb-24 px-4 sm:px-6 relative isolate z-10">
         
         {/* Background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
         <div className="text-center max-w-3xl mb-16">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-semibold mb-6 border border-indigo-100 dark:border-indigo-500/20">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 text-sm font-semibold mb-6 border border-teal-100 dark:border-teal-500/20">
             <Sparkles className="w-4 h-4" /> Simple, transparent pricing
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-6xl font-black tracking-tight mb-6">
@@ -128,7 +128,7 @@ export default function PricingPage() {
             <span className={`text-sm font-medium ${!isAnnual ? 'text-foreground' : 'text-muted-foreground'}`}>Monthly</span>
             <button 
               onClick={() => setIsAnnual(!isAnnual)}
-              className="relative w-14 h-8 bg-zinc-200 dark:bg-zinc-800 rounded-full p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="relative w-14 h-8 bg-zinc-200 dark:bg-zinc-800 rounded-full p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-teal-500/50"
             >
               <motion.div 
                 layout
@@ -154,12 +154,12 @@ export default function PricingPage() {
                transition={{ delay: 0.2 + (i * 0.1), type: "spring", stiffness: 200, damping: 20 }}
                className={`glass-card rounded-3xl p-8 flex flex-col relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
                  plan.highlight 
-                   ? 'border-indigo-500 shadow-[0_0_30px_rgba(99,102,241,0.2)] md:scale-105 z-10' 
+                   ? 'border-teal-500 shadow-[0_0_30px_rgba(99,102,241,0.2)] md:scale-105 z-10' 
                    : 'border-border'
                }`}
              >
                {plan.highlight && (
-                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-violet-500 to-indigo-500 text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full shadow-md">
+                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-teal-500 text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full shadow-md">
                    Most Popular
                  </div>
                )}
@@ -177,8 +177,8 @@ export default function PricingPage() {
                  <ul className="space-y-4 text-sm font-medium mb-8">
                    {plan.features.map(f => (
                      <li key={f} className="flex items-start gap-3">
-                       <div className="w-5 h-5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center shrink-0 mt-0.5">
-                         <Check className="w-3 h-3 text-indigo-600 dark:text-indigo-400" />
+                       <div className="w-5 h-5 rounded-full bg-teal-50 dark:bg-teal-500/10 flex items-center justify-center shrink-0 mt-0.5">
+                         <Check className="w-3 h-3 text-teal-600 dark:text-teal-400" />
                        </div>
                        <span>{f}</span>
                      </li>
@@ -188,7 +188,7 @@ export default function PricingPage() {
 
                <Button 
                 variant={plan.highlight ? "gradient" : "outline"}
-                className={`w-full py-6 text-base font-bold transition-all ${!plan.highlight && "hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"}`}
+                className={`w-full py-6 text-base font-bold transition-all ${!plan.highlight && "hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400"}`}
                 onClick={() => openPaymentModaL(plan)}
                >
                  Get Started
@@ -270,7 +270,7 @@ export default function PricingPage() {
                             type="text" 
                             required 
                             placeholder="Card number" 
-                            className="w-full pl-10 pr-3 py-3 border border-border rounded-t-lg bg-background text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" 
+                            className="w-full pl-10 pr-3 py-3 border border-border rounded-t-lg bg-background text-sm focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500" 
                             defaultValue="4242 4242 4242 4242"
                           />
                         </div>
@@ -279,14 +279,14 @@ export default function PricingPage() {
                             type="text" 
                             required 
                             placeholder="MM / YY" 
-                            className="w-1/2 px-3 py-3 border border-r-0 border-t-0 border-border rounded-bl-lg bg-background text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" 
+                            className="w-1/2 px-3 py-3 border border-r-0 border-t-0 border-border rounded-bl-lg bg-background text-sm focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500" 
                             defaultValue="12 / 28"
                           />
                           <input 
                             type="text" 
                             required 
                             placeholder="CVC" 
-                            className="w-1/2 px-3 py-3 border border-t-0 border-border rounded-br-lg bg-background text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" 
+                            className="w-1/2 px-3 py-3 border border-t-0 border-border rounded-br-lg bg-background text-sm focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500" 
                             defaultValue="123"
                           />
                         </div>
@@ -298,7 +298,7 @@ export default function PricingPage() {
                           type="text" 
                           required 
                           placeholder="Name on card" 
-                          className="w-full px-3 py-3 border border-border rounded-lg bg-background text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" 
+                          className="w-full px-3 py-3 border border-border rounded-lg bg-background text-sm focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500" 
                           defaultValue="Ryan Florence"
                         />
                       </div>
@@ -307,7 +307,7 @@ export default function PricingPage() {
                         type="submit" 
                         variant="gradient" 
                         disabled={isProcessing}
-                        className="w-full py-6 mt-6 font-bold shadow-lg shadow-indigo-500/20"
+                        className="w-full py-6 mt-6 font-bold shadow-lg shadow-teal-500/20"
                       >
                         {isProcessing ? (
                           <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Processing...</>

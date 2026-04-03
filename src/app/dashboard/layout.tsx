@@ -11,8 +11,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="absolute -top-20 right-0 w-[480px] h-[480px] rounded-full bg-gradient-to-bl from-pink-200 via-rose-100 to-fuchsia-100 opacity-55 blur-3xl animate-blob animation-delay-2000" />
         {/* Center: soft teal/cyan blob */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[560px] h-[400px] rounded-full bg-gradient-to-r from-teal-100 via-cyan-100 to-blue-100 opacity-40 blur-3xl animate-blob animation-delay-4000" />
-        {/* Bottom-left: lilac/violet blob */}
-        <div className="absolute bottom-0 -left-24 w-[440px] h-[440px] rounded-full bg-gradient-to-tr from-violet-200 via-purple-100 to-indigo-100 opacity-50 blur-3xl animate-blob animation-delay-6000" />
+        {/* Bottom-left: lilac/blue blob */}
+        <div className="absolute bottom-0 -left-24 w-[440px] h-[440px] rounded-full bg-gradient-to-tr from-blue-200 via-cyan-100 to-teal-100 opacity-50 blur-3xl animate-blob animation-delay-6000" />
         {/* Bottom-right: blue blob */}
         <div className="absolute bottom-10 right-0 w-[400px] h-[400px] rounded-full bg-gradient-to-tl from-blue-200 via-sky-100 to-cyan-100 opacity-45 blur-3xl animate-blob animation-delay-2000" />
       </div>

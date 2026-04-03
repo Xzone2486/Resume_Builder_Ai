@@ -39,13 +39,13 @@ export function JDSection() {
   return (
     <div className="w-full relative isolate mb-8">
       {/* Background highlight */}
-      <div className="absolute inset-0 bg-indigo-50 dark:bg-indigo-500/5 -mx-8 sm:-mx-12 lg:-mx-16 px-8 sm:px-12 lg:px-16 py-8 rounded-3xl -z-10 border border-indigo-100 dark:border-indigo-500/10" />
+      <div className="absolute inset-0 bg-teal-50 dark:bg-teal-500/5 -mx-8 sm:-mx-12 lg:-mx-16 px-8 sm:px-12 lg:px-16 py-8 rounded-3xl -z-10 border border-teal-100 dark:border-teal-500/10" />
 
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold flex items-center gap-2">
-            Target Job Description <Sparkles className="w-5 h-5 text-indigo-500" />
+            Target Job Description <Sparkles className="w-5 h-5 text-teal-500" />
           </h2>
           <p className="text-sm text-muted-foreground mt-1">
             Paste the JD here. We'll extract keywords and tailor your resume automatically.
@@ -66,9 +66,9 @@ export function JDSection() {
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="Paste the Job Description here. E.g. We are looking for a Senior React Developer with 5+ years of experience..."
-              className={`w-full h-52 resize-none rounded-2xl border bg-card p-5 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all ${
+              className={`w-full h-52 resize-none rounded-2xl border bg-card p-5 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-teal-500/50 transition-all ${
                 isAnalyzing
-                  ? "border-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.3)] pointer-events-none opacity-80"
+                  ? "border-teal-500 shadow-[0_0_15px_rgba(99,102,241,0.3)] pointer-events-none opacity-80"
                   : "border-border"
               }`}
             />
@@ -85,13 +85,13 @@ export function JDSection() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="absolute inset-0 bg-indigo-500/10 rounded-2xl overflow-hidden pointer-events-none"
+                  className="absolute inset-0 bg-teal-500/10 rounded-2xl overflow-hidden pointer-events-none"
                 >
                   <motion.div
                     initial={{ top: "-10%" }}
                     animate={{ top: "110%" }}
                     transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-0 right-0 h-10 bg-gradient-to-b from-transparent via-indigo-500/30 to-transparent"
+                    className="absolute left-0 right-0 h-10 bg-gradient-to-b from-transparent via-teal-500/30 to-transparent"
                   />
                 </motion.div>
               )}
@@ -129,8 +129,8 @@ export function JDSection() {
                 className="flex flex-col items-center justify-center text-center p-8 h-full"
                 style={{ minHeight: "240px" }}
               >
-                <div className="w-14 h-14 rounded-full bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center mb-4">
-                  <Target className="w-7 h-7 text-indigo-300 dark:text-indigo-500" />
+                <div className="w-14 h-14 rounded-full bg-teal-50 dark:bg-teal-500/10 flex items-center justify-center mb-4">
+                  <Target className="w-7 h-7 text-teal-300 dark:text-teal-500" />
                 </div>
                 <p className="text-sm font-medium text-muted-foreground max-w-[200px]">
                   Paste a job description to see your match score and missing keywords.
@@ -146,21 +146,21 @@ export function JDSection() {
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Match Score</span>
-                  <span className="text-3xl font-black text-indigo-600 dark:text-indigo-400">65%</span>
+                  <span className="text-3xl font-black text-teal-600 dark:text-teal-400">65%</span>
                 </div>
                 <div className="flex-1 w-full" style={{ height: "180px" }}>
                   <ResponsiveContainer width="100%" height="100%">
                     <RadarChart cx="50%" cy="50%" outerRadius="70%" data={mockData}>
                       <PolarGrid stroke="currentColor" className="opacity-10" />
                       <PolarAngleAxis dataKey="subject" tick={{ fill: "#71717a", fontSize: 10 }} />
-                      <Radar name="JD Req" dataKey="JD" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={0.1} />
+                      <Radar name="JD Req" dataKey="JD" stroke="#14b8a6" fill="#14b8a6" fillOpacity={0.1} />
                       <Radar name="Resume" dataKey="Resume" stroke="#22c55e" fill="#22c55e" fillOpacity={0.3} />
                     </RadarChart>
                   </ResponsiveContainer>
                 </div>
                 <div className="pt-3 border-t border-border flex gap-4 text-xs mt-2">
                   <div className="flex items-center gap-1.5">
-                    <div className="w-3 h-3 bg-indigo-500/20 border border-indigo-500 rounded-sm" />
+                    <div className="w-3 h-3 bg-teal-500/20 border border-teal-500 rounded-sm" />
                     <span>Required</span>
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -180,7 +180,7 @@ export function JDSection() {
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
-            className="mt-8 border-t border-indigo-100 dark:border-indigo-500/20 pt-6"
+            className="mt-8 border-t border-teal-100 dark:border-teal-500/20 pt-6"
           >
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">Extracted Keywords</h3>
             <div className="flex flex-wrap gap-2">

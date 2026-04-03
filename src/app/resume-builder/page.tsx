@@ -40,7 +40,7 @@ export default function ResumeBuilderPage() {
             </div>
 
             <div className="absolute bottom-6 right-8 z-10">
-              <Button variant="gradient" className="gap-2 shadow-xl shadow-indigo-500/20">
+              <Button variant="gradient" className="gap-2 shadow-xl shadow-teal-500/20">
                 <Download className="w-4 h-4" /> Download Resume
               </Button>
             </div>

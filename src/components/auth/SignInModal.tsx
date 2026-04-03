@@ -48,10 +48,10 @@ export function SignInModal() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="fixed inset-0 z-[101] flex items-center justify-center p-4 pointer-events-none"
           >
-            <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl shadow-indigo-500/10 border border-zinc-200 pointer-events-auto overflow-hidden">
+            <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl shadow-teal-500/10 border border-zinc-200 pointer-events-auto overflow-hidden">
               
               {/* Top gradient banner */}
-              <div className="relative h-24 bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center">
+              <div className="relative h-24 bg-gradient-to-br from-blue-600 to-teal-600 flex items-center justify-center">
                 <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 30%, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
                 <div className="flex items-center gap-2 text-white relative z-10">
                   <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
@@ -89,7 +89,7 @@ export function SignInModal() {
                         placeholder="Full Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full h-11 pl-10 pr-4 rounded-xl border border-zinc-200 bg-zinc-50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/40 transition-all placeholder:text-muted-foreground"
+                        className="w-full h-11 pl-10 pr-4 rounded-xl border border-zinc-200 bg-zinc-50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/40 transition-all placeholder:text-muted-foreground"
                       />
                     </div>
                   )}
@@ -102,7 +102,7 @@ export function SignInModal() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full h-11 pl-10 pr-4 rounded-xl border border-zinc-200 bg-zinc-50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/40 transition-all placeholder:text-muted-foreground"
+                      className="w-full h-11 pl-10 pr-4 rounded-xl border border-zinc-200 bg-zinc-50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/40 transition-all placeholder:text-muted-foreground"
                     />
                   </div>
 
@@ -114,7 +114,7 @@ export function SignInModal() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full h-11 pl-10 pr-11 rounded-xl border border-zinc-200 bg-zinc-50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/40 transition-all placeholder:text-muted-foreground"
+                      className="w-full h-11 pl-10 pr-11 rounded-xl border border-zinc-200 bg-zinc-50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/40 transition-all placeholder:text-muted-foreground"
                     />
                     <button type="button" onClick={() => setShowPass(!showPass)} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
                       {showPass ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -123,7 +123,7 @@ export function SignInModal() {
 
                   {mode === "signin" && (
                     <div className="text-right">
-                      <button type="button" className="text-xs text-indigo-600 hover:underline">Forgot password?</button>
+                      <button type="button" className="text-xs text-teal-600 hover:underline">Forgot password?</button>
                     </div>
                   )}
 

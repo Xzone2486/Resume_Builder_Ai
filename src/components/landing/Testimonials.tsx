@@ -4,85 +4,12 @@ import { useRef, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
 import FloatingLines from "./FloatingLines"
-
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "Senior Software Engineer",
-    company: "Google",
-    avatar: 1,
-    rating: 5,
-    text: "ResumeBoost AI completely transformed my resume. I went from getting zero callbacks to landing 5 interviews in a single week. The ATS optimization is incredible.",
-    highlight: "5 interviews in one week",
-  },
-  {
-    name: "Marcus Johnson",
-    role: "VP of Engineering",
-    company: "Stripe",
-    avatar: 2,
-    rating: 5,
-    text: "As someone who reviews hundreds of resumes, I can tell you — the ones built with ResumeBoost AI stand out. Clean formatting, strong verbs, and perfect keyword placement.",
-    highlight: "Stands out immediately",
-  },
-  {
-    name: "Priya Patel",
-    role: "Product Director",
-    company: "Meta",
-    avatar: 3,
-    rating: 5,
-    text: "I was skeptical at first, but the AI rewrites were genuinely impressive. It captured my achievements in ways I never could have articulated on my own.",
-    highlight: "Genuinely impressive",
-  },
-  {
-    name: "David Kim",
-    role: "Data Science Lead",
-    company: "Netflix",
-    avatar: 4,
-    rating: 5,
-    text: "The job description matching feature is a game-changer. My resume score went from 42% to 96% and I got the offer within two weeks.",
-    highlight: "42% → 96% ATS score",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Executive Director",
-    company: "McKinsey",
-    avatar: 5,
-    rating: 5,
-    text: "As a career changer, I struggled to position my experience. ResumeBoost AI helped me reframe everything perfectly for consulting roles.",
-    highlight: "Perfect career pivot",
-  },
-  {
-    name: "Alex Thompson",
-    role: "Staff Engineer",
-    company: "Apple",
-    avatar: 6,
-    rating: 5,
-    text: "I've used every resume tool out there. ResumeBoost AI is the only one that actually understands the nuances of technical resumes and ATS systems.",
-    highlight: "Best in class",
-  },
-  {
-    name: "Nina Kowalski",
-    role: "Head of Design",
-    company: "Figma",
-    avatar: 7,
-    rating: 5,
-    text: "The templates are stunning and the AI suggestions are incredibly smart. Got three offers from FAANG companies within a month of using this tool.",
-    highlight: "3 FAANG offers",
-  },
-  {
-    name: "James Wright",
-    role: "CTO",
-    company: "Coinbase",
-    avatar: 8,
-    rating: 5,
-    text: "ResumeBoost AI doesn't just optimize for machines — it makes your resume genuinely compelling to human readers too. That's the real magic.",
-    highlight: "Human + ATS optimized",
-  },
-]
+import { testimonials } from "@/lib/testimonialsData"
 
 // Split into two rows for different scroll directions
-const row1 = testimonials.slice(0, 4)
-const row2 = testimonials.slice(4, 8)
+const half = Math.ceil(testimonials.length / 2)
+const row1 = testimonials.slice(0, half)
+const row2 = testimonials.slice(half)
 
 function TestimonialCard({ t, index }: { t: typeof testimonials[0]; index: number }) {
   const [isHovered, setIsHovered] = useState(false)
@@ -95,38 +22,49 @@ function TestimonialCard({ t, index }: { t: typeof testimonials[0]; index: numbe
       transition={{ delay: index * 0.05, type: "spring", stiffness: 100 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="min-w-[340px] md:min-w-[380px] p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-zinc-200/80 dark:border-zinc-800 shadow-lg hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 flex-shrink-0 relative group cursor-default select-none"
+      className="min-w-[340px] md:min-w-[380px] p-6 rounded-2xl bg-white dark:bg-zinc-900/80 border border-zinc-200/80 dark:border-zinc-800 shadow-lg hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-500 flex-shrink-0 relative group cursor-default select-none"
       style={{
         transform: isHovered ? "translateY(-8px) scale(1.03)" : "translateY(0) scale(1)",
         transition: "transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease",
       }}
     >
       {/* Glow effect on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {/* Quote icon */}
-      <Quote className="absolute top-4 right-4 w-8 h-8 text-indigo-500/10 group-hover:text-indigo-500/20 transition-colors" />
+      <Quote className="absolute top-4 right-4 w-8 h-8 text-teal-500/10 group-hover:text-teal-500/20 transition-colors" />
 
       {/* Stars */}
       <div className="flex gap-1 mb-4">
-        {Array.from({ length: t.rating }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            className={`w-4 h-4 ${
+              i < t.rating ? "fill-amber-400 text-amber-400" : "fill-transparent text-zinc-300 dark:text-zinc-700"
+            }`}
+          />
         ))}
       </div>
 
       {/* Review text */}
-      <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-4 group-hover:line-clamp-none transition-all">
-        &ldquo;{t.text}&rdquo;
-      </p>
+      {t.text && (
+        <div className="mb-4 pr-2 max-h-[120px] overflow-y-auto custom-scrollbar">
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            &ldquo;{t.text}&rdquo;
+          </p>
+        </div>
+      )}
 
       {/* Highlight badge */}
-      <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold mb-5">
-        {t.highlight}
-      </div>
+      {t.pinned && (
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs font-semibold mb-5">
+          📌 Pinned Review
+        </div>
+      )}
 
       {/* Person */}
       <div className="flex items-center gap-3 mt-auto pt-4 border-t border-zinc-100 dark:border-zinc-800">
-        <div className="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden border-2 border-indigo-500/30 flex-shrink-0">
+        <div className="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden border-2 border-teal-500/30 flex-shrink-0">
           <img
             src={`https://api.dicebear.com/7.x/notionists/svg?seed=${t.avatar}&backgroundColor=transparent`}
             alt={t.name}
@@ -136,7 +74,7 @@ function TestimonialCard({ t, index }: { t: typeof testimonials[0]; index: numbe
         <div className="min-w-0">
           <p className="text-sm font-semibold truncate">{t.name}</p>
           <p className="text-xs text-muted-foreground truncate">
-            {t.role} · {t.company}
+            {t.date}
           </p>
         </div>
       </div>
@@ -149,7 +87,7 @@ function ScrollRow({ items, direction }: { items: typeof testimonials; direction
   const animFrameRef = useRef<number>(0)
   const posRef = useRef(0)
   const pausedRef = useRef(false)
-  const speed = direction === "left" ? 0.4 : 0.35
+  const speed = direction === "left" ? 0.25 : 0.2
   const allItems = [...items, ...items, ...items]
 
   useEffect(() => {
@@ -250,7 +188,7 @@ export function Testimonials() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { value: "50K+", label: "Professionals Served" },
+            { value: "100K+", label: "Professionals Served" },
             { value: "4.9/5", label: "Average Rating" },
             { value: "92%", label: "Interview Rate" },
             { value: "3x", label: "Faster Hiring" },

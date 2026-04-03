@@ -52,7 +52,7 @@ export function Sidebar() {
       >
         <div className="flex items-center h-16 px-4 border-b border-border/50 justify-between shrink-0">
           <Link to="/" className="flex items-center gap-2 overflow-hidden flex-shrink-0">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shrink-0">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-teal-600 shrink-0">
               <span className="text-white font-bold text-sm tracking-tight">RZ</span>
             </div>
             {!collapsed && (
@@ -78,16 +78,16 @@ export function Sidebar() {
                 <div className={cn(
                   "flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all group relative overflow-hidden",
                   isActive 
-                    ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium" 
+                    ? "bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium" 
                     : "text-muted-foreground hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-foreground"
                 )}>
                   {isActive && (
                     <motion.div 
                       layoutId="sidebar-active"
-                      className="absolute left-0 top-0 bottom-0 w-1 bg-indigo-600 rounded-r-md"
+                      className="absolute left-0 top-0 bottom-0 w-1 bg-teal-600 rounded-r-md"
                     />
                   )}
-                  <Icon className={cn("w-5 h-5 shrink-0 transition-transform group-hover:scale-110", isActive && "text-indigo-600 dark:text-indigo-400")} />
+                  <Icon className={cn("w-5 h-5 shrink-0 transition-transform group-hover:scale-110", isActive && "text-teal-600 dark:text-teal-400")} />
                   
                   {!collapsed && (
                     <span className="whitespace-nowrap">{link.name}</span>
@@ -100,9 +100,9 @@ export function Sidebar() {
 
         <div className="p-4 border-t border-border/50 flex flex-col gap-4">
           {!collapsed && (
-            <div className="bg-gradient-to-br from-indigo-500/10 to-violet-500/10 rounded-xl p-4 border border-indigo-500/20 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-16 h-16 bg-indigo-500/20 rounded-full blur-xl" />
-              <Sparkles className="w-5 h-5 text-indigo-500 mb-2" />
+            <div className="bg-gradient-to-br from-teal-500/10 to-blue-500/10 rounded-xl p-4 border border-teal-500/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-teal-500/20 rounded-full blur-xl" />
+              <Sparkles className="w-5 h-5 text-teal-500 mb-2" />
               <p className="text-sm font-medium mb-1">Pro Plan</p>
               <p className="text-xs text-muted-foreground mb-3">12 days left in trial</p>
               <Button variant="gradient" size="sm" className="w-full text-xs h-8">Upgrade Now</Button>

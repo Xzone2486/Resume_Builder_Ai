@@ -37,13 +37,13 @@ export function ResumeTable() {
               </td>
               <td className="px-6 py-4 text-right">
                 <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-indigo-600">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-teal-600">
                     <Eye className="w-4 h-4" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-indigo-600">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-teal-600">
                     <Edit2 className="w-4 h-4" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-indigo-600">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-teal-600">
                     <Copy className="w-4 h-4" />
                   </Button>
                   <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-rose-600">
@@ -61,9 +61,9 @@ export function ResumeTable() {
 
 function FileIcon() {
   return (
-    <div className="w-8 h-8 rounded bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 flex items-center justify-center shrink-0">
-      <div className="w-3 h-4 border-[1.5px] border-indigo-500 rounded-sm relative">
-        <div className="absolute top-[2px] right-[2px] w-[3px] h-[3px] bg-indigo-500 rounded-[1px]" />
+    <div className="w-8 h-8 rounded bg-teal-50 dark:bg-teal-500/10 border border-teal-100 dark:border-teal-500/20 flex items-center justify-center shrink-0">
+      <div className="w-3 h-4 border-[1.5px] border-teal-500 rounded-sm relative">
+        <div className="absolute top-[2px] right-[2px] w-[3px] h-[3px] bg-teal-500 rounded-[1px]" />
       </div>
     </div>
   )

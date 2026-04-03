@@ -19,29 +19,29 @@ export function EliteResumeTools() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="group col-span-1 md:col-span-2 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px] flex flex-col items-end"
+        className="group col-span-1 md:col-span-2 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px] flex flex-col items-end"
       >
         <h3 className="text-xl md:text-2xl font-extrabold text-zinc-900 group-hover:text-white transition-colors duration-500 z-20 relative text-right">ATS Resume Analyzer</h3>
         
         {/* Mockup UI */}
-        <div className="absolute left-0 md:left-[-20px] bottom-[-20px] w-[320px] md:w-[420px] bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-t-xl rounded-br-xl shadow-xl border border-violet-100 p-6 transform translate-x-3 md:translate-x-0 z-10">
+        <div className="absolute left-0 md:left-[-20px] bottom-[-20px] w-[320px] md:w-[420px] bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-t-xl rounded-br-xl shadow-xl border border-blue-100 p-6 transform translate-x-3 md:translate-x-0 z-10">
           <div className="flex gap-6 items-center mb-6">
-            <div className="relative w-24 h-24 flex-shrink-0 bg-violet-50 rounded-full flex items-center justify-center border-4 border-violet-100 shadow-inner">
+            <div className="relative w-24 h-24 flex-shrink-0 bg-blue-50 rounded-full flex items-center justify-center border-4 border-blue-100 shadow-inner">
                <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 80 80">
-                 <circle cx="40" cy="40" r="34" stroke="#8b5cf6" strokeWidth="8" fill="none" strokeDasharray="213.6" strokeDashoffset="34" strokeLinecap="round" />
+                 <circle cx="40" cy="40" r="34" stroke="#14b8a6" strokeWidth="8" fill="none" strokeDasharray="213.6" strokeDashoffset="34" strokeLinecap="round" />
                </svg>
                <div className="flex flex-col items-center">
-                 <span className="text-2xl font-extrabold text-violet-600">94</span>
-                 <span className="text-[9px] font-bold text-violet-400 uppercase tracking-widest">Score</span>
+                 <span className="text-2xl font-extrabold text-blue-600">94</span>
+                 <span className="text-[9px] font-bold text-blue-400 uppercase tracking-widest">Score</span>
                </div>
             </div>
             <div className="flex-1 space-y-4">
                <div>
                  <div className="flex justify-between text-xs font-semibold text-zinc-600 mb-1">
                    <span>Keywords</span>
-                   <span className="text-violet-600">90%</span>
+                   <span className="text-blue-600">90%</span>
                  </div>
-                 <div className="h-2 bg-zinc-100 w-full rounded-full overflow-hidden"><div className="h-full bg-violet-500 rounded-full w-[90%]" /></div>
+                 <div className="h-2 bg-zinc-100 w-full rounded-full overflow-hidden"><div className="h-full bg-blue-500 rounded-full w-[90%]" /></div>
                </div>
                <div>
                  <div className="flex justify-between text-xs font-semibold text-zinc-600 mb-1">
@@ -66,14 +66,14 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ delay: 0.1 }}
-        className="group col-span-1 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">Smart Resume Optimizer</h3>
         
-        <div className="mt-8 bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-xl shadow-xl border border-violet-100 p-4 space-y-3">
-           <div className="h-6 bg-violet-50 rounded-md w-full border border-violet-100 flex items-center px-2 gap-2">
-              <Zap className="w-3 h-3 text-violet-500" />
-              <span className="text-[9px] font-bold text-violet-700">Level: Expert</span>
+        <div className="mt-8 bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-xl shadow-xl border border-blue-100 p-4 space-y-3">
+           <div className="h-6 bg-blue-50 rounded-md w-full border border-blue-100 flex items-center px-2 gap-2">
+              <Zap className="w-3 h-3 text-blue-500" />
+              <span className="text-[9px] font-bold text-blue-700">Level: Expert</span>
            </div>
            <div className="flex items-center gap-2">
              <div className="h-1 bg-zinc-200 rounded-full flex-1" />
@@ -89,7 +89,7 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ delay: 0.2 }}
-        className="group col-span-1 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">Keyword Match Engine</h3>
         
@@ -101,8 +101,8 @@ export function EliteResumeTools() {
               </div>
               <div className="h-1.5 bg-zinc-100 rounded-full w-full" />
            </div>
-           <div className="absolute left-4 top-12 w-full bg-white group-hover:bg-zinc-100 rounded-lg shadow-lg p-3 z-20 border border-violet-100 scale-95 opacity-80">
-              <div className="h-1.5 bg-violet-200 rounded-full w-16 mb-2" />
+           <div className="absolute left-4 top-12 w-full bg-white group-hover:bg-zinc-100 rounded-lg shadow-lg p-3 z-20 border border-blue-100 scale-95 opacity-80">
+              <div className="h-1.5 bg-blue-200 rounded-full w-16 mb-2" />
               <div className="h-1.5 bg-zinc-100 rounded-full w-full" />
            </div>
         </div>
@@ -114,7 +114,7 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="group col-span-1 md:col-span-2 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 md:col-span-2 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">AI Resume Rewriter</h3>
         
@@ -125,7 +125,7 @@ export function EliteResumeTools() {
                  <div className="h-2 bg-zinc-200 rounded-full w-full" />
               </div>
               <div className="flex justify-center -my-2">
-                 <div className="bg-violet-600 text-white p-1 rounded-full"><Sparkles className="w-3 h-3" fill="currentColor" /></div>
+                 <div className="bg-blue-600 text-white p-1 rounded-full"><Sparkles className="w-3 h-3" fill="currentColor" /></div>
               </div>
               <div className="p-3 bg-emerald-50 rounded border border-emerald-100">
                  <span className="text-[10px] font-bold text-emerald-600 block mb-2">REWRITTEN</span>
@@ -141,7 +141,7 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="group col-span-1 md:col-span-2 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 md:col-span-2 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">ATS Score Booster</h3>
         
@@ -149,10 +149,10 @@ export function EliteResumeTools() {
             <div className="w-full flex justify-between items-center mb-6">
                <div className="space-y-2">
                   <div className="h-3 bg-zinc-100 rounded-full w-32" />
-                  <div className="h-2.5 bg-violet-400 rounded-full w-24 shadow-lg shadow-violet-500/20" />
+                  <div className="h-2.5 bg-blue-400 rounded-full w-24 shadow-lg shadow-blue-500/20" />
                </div>
                <div className="text-center">
-                  <div className="text-4xl font-black text-violet-600">92%</div>
+                  <div className="text-4xl font-black text-blue-600">92%</div>
                   <div className="text-[9px] font-bold text-zinc-400 tracking-tighter">OPTIMIZED</div>
                </div>
             </div>
@@ -170,12 +170,12 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="group col-span-1 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">Professional Summary Builder</h3>
         
         <div className="mt-8 bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-xl shadow-xl border border-zinc-100 p-5">
-           <div className="border border-violet-100 bg-violet-50/50 rounded-lg p-3 space-y-2">
+           <div className="border border-blue-100 bg-blue-50/50 rounded-lg p-3 space-y-2">
               <div className="h-1.5 bg-zinc-800 rounded-full w-2/3" />
               <div className="h-1.5 bg-zinc-300 rounded-full w-full" />
               <div className="h-1.5 bg-zinc-300 rounded-full w-5/6" />
@@ -189,12 +189,12 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="group col-span-1 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px] flex flex-col"
+        className="group col-span-1 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px] flex flex-col"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 mb-12">Skill gap analyzer</h3>
         
         <div className="flex-1 flex flex-col gap-4 items-center justify-center -mt-6">
-           <div className="bg-white rounded-full shadow-lg shadow-violet-500/5 px-4 py-2.5 flex items-center gap-2 border border-violet-50 w-max transform -translate-x-4">
+           <div className="bg-white rounded-full shadow-lg shadow-blue-500/5 px-4 py-2.5 flex items-center gap-2 border border-blue-50 w-max transform -translate-x-4">
               <Flame className="w-4 h-4 text-orange-500" fill="currentColor" />
               <span className="text-sm font-bold text-zinc-700">Missing Skills</span>
               <span className="ml-2 bg-red-50 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded-full">AWS, Docker</span>
@@ -214,25 +214,25 @@ export function EliteResumeTools() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="group col-span-1 md:col-span-2 bg-violet-50 hover:bg-violet-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
+        className="group col-span-1 md:col-span-2 bg-blue-50 hover:bg-blue-600 transition-colors duration-500 rounded-3xl p-6 md:p-8 relative overflow-hidden min-h-[300px]"
       >
         <h3 className="text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-white transition-colors duration-500 z-10 relative">Resume Templates</h3>
         
         {/* Templates Mockup Container */}
         <div className="absolute right-0 bottom-[-40px] w-full md:w-[380px] h-[220px]">
            {/* Template 3 (Front) */}
-           <div className="absolute right-12 md:right-32 bottom-2 w-[230px] h-[300px] bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-t-sm shadow-2xl border border-violet-100 z-20 flex flex-col">
+           <div className="absolute right-12 md:right-32 bottom-2 w-[230px] h-[300px] bg-white group-hover:bg-zinc-100 transition-colors duration-500 rounded-t-sm shadow-2xl border border-blue-100 z-20 flex flex-col">
               <div className="border-b border-zinc-100 p-4 pb-3 flex flex-col items-center text-center">
-                 <div className="text-[15px] font-serif text-violet-900 tracking-wide font-bold">Alex Mercer</div>
-                 <div className="text-[8px] text-violet-600 uppercase tracking-widest font-extrabold mt-1">Full-Stack Developer</div>
+                 <div className="text-[15px] font-serif text-blue-900 tracking-wide font-bold">Alex Mercer</div>
+                 <div className="text-[8px] text-blue-600 uppercase tracking-widest font-extrabold mt-1">Full-Stack Developer</div>
               </div>
               <div className="p-4 space-y-3">
                  <div className="space-y-1.5">
-                   <div className="h-1.5 bg-violet-200 rounded-full w-1/3" />
+                   <div className="h-1.5 bg-blue-200 rounded-full w-1/3" />
                    <div className="h-1 bg-zinc-200 rounded-full w-full" />
                  </div>
                  <div className="space-y-1.5">
-                   <div className="h-1.5 bg-violet-200 rounded-full w-1/4" />
+                   <div className="h-1.5 bg-blue-200 rounded-full w-1/4" />
                    <div className="h-1 bg-zinc-200 rounded-full w-full" />
                  </div>
               </div>

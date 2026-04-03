@@ -26,13 +26,13 @@ export function HowItWorks() {
       title: "2. AI Analysis & Rewrite",
       desc: "Our engine scans for missing keywords, weak verbs, and poor formatting, then instantly generates optimized bullet points.",
       icon: <Bot className="w-6 h-6 text-white" />,
-      color: "bg-indigo-500"
+      color: "bg-teal-500"
     },
     {
       title: "3. Download & Apply",
       desc: "Export your hyper-optimized, ATS-friendly resume as a beautiful PDF or raw DOCX, ready to get you hired.",
       icon: <Download className="w-6 h-6 text-white" />,
-      color: "bg-violet-500"
+      color: "bg-blue-500"
     }
   ]
 
@@ -40,9 +40,9 @@ export function HowItWorks() {
     <section className="py-16 relative overflow-hidden bg-white/30 dark:bg-zinc-950/30" ref={containerRef}>
       {/* Rich background fills */}
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.04] via-transparent to-violet-500/[0.04] pointer-events-none" />
-      <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-indigo-500/[0.05] rounded-full blur-[120px] animate-blob pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[20%] w-[400px] h-[400px] bg-violet-500/[0.05] rounded-full blur-[100px] animate-blob animation-delay-2000 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.04] via-transparent to-blue-500/[0.04] pointer-events-none" />
+      <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-teal-500/[0.05] rounded-full blur-[120px] animate-blob pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[20%] w-[400px] h-[400px] bg-blue-500/[0.05] rounded-full blur-[100px] animate-blob animation-delay-2000 pointer-events-none" />
       <div className="container px-6 mx-auto text-center max-w-4xl relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-20">How It Works</h2>
 
@@ -51,7 +51,7 @@ export function HowItWorks() {
           {/* Timeline Line (Desktop only) */}
           <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[2px] bg-zinc-200 dark:bg-zinc-800">
             <motion.div 
-              className="h-full bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 origin-left"
+              className="h-full bg-gradient-to-r from-blue-500 via-teal-500 to-blue-500 origin-left"
               style={{ scaleX: pathLength }}
             />
           </div>
@@ -59,7 +59,7 @@ export function HowItWorks() {
           {/* Timeline Line (Mobile only) */}
           <div className="block md:hidden absolute top-0 bottom-0 left-[28px] w-[2px] bg-zinc-200 dark:bg-zinc-800 z-[-1]">
             <motion.div 
-              className="w-full bg-gradient-to-b from-blue-500 via-indigo-500 to-violet-500 origin-top"
+              className="w-full bg-gradient-to-b from-blue-500 via-teal-500 to-blue-500 origin-top"
               style={{ scaleY: pathLength }}
             />
           </div>

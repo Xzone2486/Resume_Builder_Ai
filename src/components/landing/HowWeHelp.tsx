@@ -17,7 +17,7 @@ const features = [
     icon: Wand2,
     title: "One-Click AI Rewrite",
     description: "Transform vague bullet points into quantified, action-driven achievements. Just click and watch your resume evolve in real-time.",
-    bg: "linear-gradient(135deg, #7c3aed, #c026d3)",
+    bg: "linear-gradient(135deg, #0d9488, #c026d3)",
     number: "02",
     stat: "10× faster resume writing",
   },
@@ -49,7 +49,7 @@ const features = [
     icon: Zap,
     title: "Real-Time Feedback Loop",
     description: "Instantly see how every edit impacts your ATS score, keyword density, and recruiter appeal without ever leaving the editor.",
-    bg: "linear-gradient(135deg, #4f46e5, #0891b2)",
+    bg: "linear-gradient(135deg, #1d4ed8, #0891b2)",
     number: "06",
     stat: "Live score updates",
   },
@@ -118,7 +118,7 @@ export function HowWeHelp() {
       }}
     >
       {/* Ambient blobs (lightened) */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-200/40 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/40 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-100/40 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-pink-100/30 rounded-full blur-[100px] pointer-events-none" />
 
@@ -133,13 +133,13 @@ export function HowWeHelp() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100 text-violet-600 text-sm font-medium mb-5 border border-violet-200">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-600 text-sm font-medium mb-5 border border-blue-200">
               <Zap className="w-4 h-4" />
               Supercharge Your Job Search
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-3 text-zinc-900">
               How ROZGAR 24/7{" "}
-              <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-teal-600 to-cyan-500 bg-clip-text text-transparent">
                 Powers Your Success
               </span>
             </h2>

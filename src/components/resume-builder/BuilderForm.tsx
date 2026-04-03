@@ -116,7 +116,7 @@ export function BuilderForm() {
                 exit={{ opacity: 0, y: 10 }}
                 className="flex items-center gap-1.5 text-muted-foreground"
              >
-               <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" /> Saving...
+               <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" /> Saving...
              </motion.span>
           ) : (
             <motion.span
@@ -145,7 +145,7 @@ export function BuilderForm() {
             onClick={() => setActiveTab(tab.id as any)}
             className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
               activeTab === tab.id 
-                ? "border-indigo-500 text-indigo-600 dark:text-indigo-400" 
+                ? "border-teal-500 text-teal-600 dark:text-teal-400" 
                 : "border-transparent text-muted-foreground hover:text-foreground"
             }`}
           >
@@ -181,12 +181,12 @@ export function BuilderForm() {
                 <div className="pt-4 border-t border-border">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-lg font-bold">Professional Summary</h3>
-                    <Button variant="outline" size="sm" type="button" className="text-xs h-7 border-indigo-200 text-indigo-600 hover:bg-indigo-50 dark:border-indigo-500/20 dark:text-indigo-400 dark:hover:bg-indigo-500/10">
+                    <Button variant="outline" size="sm" type="button" className="text-xs h-7 border-teal-200 text-teal-600 hover:bg-teal-50 dark:border-teal-500/20 dark:text-teal-400 dark:hover:bg-teal-500/10">
                        <Sparkles className="w-3 h-3 mr-1" /> Use AI
                     </Button>
                   </div>
                   <textarea 
-                    className="w-full h-32 resize-y rounded-xl border border-border bg-background p-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                    className="w-full h-32 resize-y rounded-xl border border-border bg-background p-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
                     placeholder="Briefly describe your expertise..."
                     {...form.register("summary")}
                   />
@@ -210,7 +210,7 @@ export function BuilderForm() {
                     variant="ghost" 
                     size="sm" 
                     onClick={() => appendExp({ title: "", company: "", startDate: "", endDate: "", current: false, description: "" })}
-                    className="text-indigo-600 dark:text-indigo-400"
+                    className="text-teal-600 dark:text-teal-400"
                   >
                     <Plus className="w-4 h-4 mr-1" /> Add Role
                   </Button>
@@ -241,7 +241,7 @@ export function BuilderForm() {
                         <div className="space-y-1">
                            <InputField label="End Date" placeholder="MM/YYYY or Present" disabled={form.watch(`experience.${index}.current`)} {...form.register(`experience.${index}.endDate` as const)} />
                            <label className="flex items-center gap-2 text-xs text-muted-foreground mt-1 cursor-pointer">
-                             <input type="checkbox" className="rounded border-border text-indigo-600 focus:ring-indigo-500" {...form.register(`experience.${index}.current` as const)} />
+                             <input type="checkbox" className="rounded border-border text-teal-600 focus:ring-teal-500" {...form.register(`experience.${index}.current` as const)} />
                              I currently work here
                            </label>
                         </div>
@@ -250,12 +250,12 @@ export function BuilderForm() {
                       <div className="relative">
                         <div className="flex items-center justify-between mb-2">
                            <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Description</label>
-                           <Button variant="outline" size="sm" type="button" className="text-xs h-6 px-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 dark:border-indigo-500/20 dark:text-indigo-400 dark:hover:bg-indigo-500/10 rounded-full">
+                           <Button variant="outline" size="sm" type="button" className="text-xs h-6 px-2 border-teal-200 text-teal-600 hover:bg-teal-50 dark:border-teal-500/20 dark:text-teal-400 dark:hover:bg-teal-500/10 rounded-full">
                              <Sparkles className="w-3 h-3 mr-1" /> Enhance With AI
                            </Button>
                         </div>
                         <textarea 
-                          className="w-full h-32 resize-y rounded-xl border border-border bg-background p-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                          className="w-full h-32 resize-y rounded-xl border border-border bg-background p-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
                           placeholder="• Led a team of 5 engineers..."
                           {...form.register(`experience.${index}.description` as const)}
                         />
@@ -295,7 +295,7 @@ function InputField({ label, error, className = "", ...props }: any) {
         {label}
       </label>
       <input
-        className={`px-3 py-2 rounded-lg border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-shadow ${
+        className={`px-3 py-2 rounded-lg border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50 transition-shadow ${
           error ? "border-rose-500 focus:ring-rose-500/50" : "border-border"
         }`}
         {...props}

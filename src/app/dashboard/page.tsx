@@ -25,13 +25,13 @@ export default function Dashboard() {
             <p className="text-xs text-teal-700/70">PDF, DOCX up to 5MB</p>
           </div>
 
-          {/* AI Builder – violet/pink tint */}
-          <div className="rounded-2xl p-6 border border-violet-200/70 bg-violet-50/60 backdrop-blur-sm hover:border-violet-400/60 hover:bg-violet-50/90 transition-all flex flex-col items-center justify-center text-center group cursor-pointer h-48 shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
-              <FileEdit className="w-6 h-6 text-violet-600" />
+          {/* AI Builder – blue/pink tint */}
+          <div className="rounded-2xl p-6 border border-blue-200/70 bg-blue-50/60 backdrop-blur-sm hover:border-blue-400/60 hover:bg-blue-50/90 transition-all flex flex-col items-center justify-center text-center group cursor-pointer h-48 shadow-sm">
+            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
+              <FileEdit className="w-6 h-6 text-blue-600" />
             </div>
-            <h3 className="font-bold mb-1 text-violet-900">AI Builder</h3>
-            <p className="text-xs text-violet-700/70">Start from scratch or LinkedIn</p>
+            <h3 className="font-bold mb-1 text-blue-900">AI Builder</h3>
+            <p className="text-xs text-blue-700/70">Start from scratch or LinkedIn</p>
           </div>
         </div>
 

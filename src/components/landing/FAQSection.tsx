@@ -53,7 +53,7 @@ export function FAQSection() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto mb-16 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-violet-400 text-sm font-medium mb-4 border border-violet-500/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-4 border border-blue-500/20">
             Support & FAQs
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
@@ -80,7 +80,7 @@ export function FAQSection() {
       </div>
       
       {/* Decorative Blob */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
     </section>
   );
 }

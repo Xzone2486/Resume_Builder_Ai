@@ -36,7 +36,7 @@ export function WelcomeBanner() {
                 initial={{ width: 0 }} 
                 animate={{ width: "60%" }} 
                 transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                className="h-full bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full" 
+                className="h-full bg-gradient-to-r from-blue-500 to-teal-500 rounded-full" 
               />
             </div>
           </div>

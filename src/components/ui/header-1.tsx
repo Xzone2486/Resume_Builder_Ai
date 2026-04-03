@@ -62,11 +62,11 @@ export function Header() {
 					<div className="flex items-center flex-1">
 						{/* Logo */}
 						<Link to="/" className="flex items-center gap-2 group mr-10">
-							<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 shadow-md group-hover:scale-105 transition-transform">
+							<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-teal-600 shadow-md group-hover:scale-105 transition-transform">
 								<span className="text-white font-bold text-base tracking-tight">RZ</span>
 							</div>
 							<span className="font-semibold text-2xl tracking-tight hidden sm:block text-zinc-900 dark:text-zinc-50">
-								ROZGAR <span className="font-semibold text-indigo-600">24/7</span>
+								ROZGAR <span className="font-semibold text-teal-600">24/7</span>
 							</span>
 						</Link>
 
@@ -76,8 +76,8 @@ export function Header() {
 								<Link 
 									key={link.label} 
 									className={cn(
-										"text-[15px] font-medium text-slate-600 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5", 
-										pathname === link.href && "text-indigo-600 dark:text-indigo-400"
+										"text-[15px] font-medium text-slate-600 hover:text-teal-600 dark:text-zinc-400 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5", 
+										pathname === link.href && "text-teal-600 dark:text-teal-400"
 									)} 
 									to={link.href}
 								>
@@ -93,7 +93,7 @@ export function Header() {
 							<div className="relative" ref={profileRef}>
 								<button
 									onClick={() => setProfileOpen(!profileOpen)}
-									className="flex items-center gap-2 pl-1 pr-3 py-1.5 rounded-full border border-border hover:border-indigo-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
+									className="flex items-center gap-2 pl-1 pr-3 py-1.5 rounded-full border border-border hover:border-teal-300 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all"
 								>
 									<img src={user.avatar} className="w-7 h-7 rounded-full bg-zinc-100 dark:bg-zinc-800" alt={user.name} />
 									<span className="text-sm font-medium hidden sm:block max-w-[120px] truncate">{user.name}</span>

@@ -37,8 +37,8 @@ export function Hero() {
             animate="visible"
             className="flex flex-col items-center text-center lg:items-start lg:text-left max-w-2xl mx-auto lg:mx-0"
           >
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-medium mb-6 backdrop-blur-sm border border-indigo-500/20">
-              <span className="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 text-sm font-medium mb-6 backdrop-blur-sm border border-teal-500/20">
+              <span className="flex h-2 w-2 rounded-full bg-teal-600 animate-pulse" />
               Build Your Resume with AI Now!
             </motion.div>
 
@@ -82,7 +82,7 @@ export function Hero() {
 
           {/* Right Side 3D Canvas */}
           <div className="w-full h-[500px] lg:h-[600px] relative">
-            <React.Suspense fallback={<div className="w-full h-[100%] animate-pulse rounded-2xl bg-indigo-500/10" />}>
+            <React.Suspense fallback={<div className="w-full h-[100%] animate-pulse rounded-2xl bg-teal-500/10" />}>
               <HeroCanvas />
             </React.Suspense>
           </div>

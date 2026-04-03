@@ -24,9 +24,9 @@ const resumeTemplates: Template[] = [
     role: "Marketing Manager",
     level: "Mid-Senior Level",
     category: "Marketing",
-    color: "from-violet-500/20 to-violet-600/5",
-    badge: "bg-violet-500",
-    iconBg: "bg-violet-100 text-violet-600",
+    color: "from-blue-500/20 to-blue-600/5",
+    badge: "bg-blue-500",
+    iconBg: "bg-blue-100 text-blue-600",
     score: 95,
     file: "/templates/1. Marketing Manager - Resume.pdf",
     image: "/hero_3d_templates/template-1.png",
@@ -66,9 +66,9 @@ const resumeTemplates: Template[] = [
     role: "Engineering Lead",
     level: "Senior Level",
     category: "Engineering",
-    color: "from-indigo-500/20 to-indigo-600/5",
-    badge: "bg-indigo-500",
-    iconBg: "bg-indigo-100 text-indigo-600",
+    color: "from-teal-500/20 to-teal-600/5",
+    badge: "bg-teal-500",
+    iconBg: "bg-teal-100 text-teal-600",
     score: 99,
     file: "/templates/New template - Software Engineering Lead.pdf",
     image: "/hero_3d_templates/template-4.png",
@@ -209,8 +209,8 @@ export function ResumeCarousel() {
       <section id="examples" className="py-12 bg-zinc-50 relative overflow-hidden">
       {/* Rich background fills */}
       <div className="absolute inset-0 bg-dot-pattern-lg pointer-events-none" />
-      <div className="absolute top-0 left-[-5%] w-[350px] h-[350px] bg-violet-500/[0.05] rounded-full blur-[80px] animate-float-slow pointer-events-none" />
-      <div className="absolute bottom-0 right-[-5%] w-[350px] h-[350px] bg-indigo-500/[0.05] rounded-full blur-[80px] animate-float-slow animation-delay-4000 pointer-events-none" />
+      <div className="absolute top-0 left-[-5%] w-[350px] h-[350px] bg-blue-500/[0.05] rounded-full blur-[80px] animate-float-slow pointer-events-none" />
+      <div className="absolute bottom-0 right-[-5%] w-[350px] h-[350px] bg-teal-500/[0.05] rounded-full blur-[80px] animate-float-slow animation-delay-4000 pointer-events-none" />
       <div className="container px-6 mx-auto mb-12 relative z-10">
         <div className="max-w-xl">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Proven Templates</h2>
@@ -226,7 +226,7 @@ export function ResumeCarousel() {
         {/* Left Arrow */}
         <button 
           onClick={() => scroll('left')}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-zinc-200 shadow-xl flex items-center justify-center text-zinc-600 hover:bg-white hover:text-indigo-600 transition-all active:scale-90"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-zinc-200 shadow-xl flex items-center justify-center text-zinc-600 hover:bg-white hover:text-teal-600 transition-all active:scale-90"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -234,7 +234,7 @@ export function ResumeCarousel() {
         {/* Right Arrow */}
         <button 
           onClick={() => scroll('right')}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-zinc-200 shadow-xl flex items-center justify-center text-zinc-600 hover:bg-white hover:text-indigo-600 transition-all active:scale-90"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border border-zinc-200 shadow-xl flex items-center justify-center text-zinc-600 hover:bg-white hover:text-teal-600 transition-all active:scale-90"
         >
           <ChevronRight className="w-6 h-6" />
         </button>

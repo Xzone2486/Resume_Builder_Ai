@@ -37,8 +37,8 @@ const journeySteps = [
     title: "Job-Specific Tailoring",
     description:
       "Paste any job description and get a resume fine-tuned for that exact role — maximizing your ATS match score instantly.",
-    color: "bg-violet-500",
-    gradient: "from-violet-500 to-purple-500",
+    color: "bg-blue-500",
+    gradient: "from-blue-500 to-cyan-500",
   },
   {
     icon: MessageSquareHeart,
@@ -64,8 +64,8 @@ const journeySteps = [
     title: "Launch & Land the Role",
     description:
       "Export in multiple formats, apply with confidence, and track your progress — we're with you until you sign the offer letter.",
-    color: "bg-indigo-500",
-    gradient: "from-indigo-500 to-blue-500",
+    color: "bg-teal-500",
+    gradient: "from-teal-500 to-blue-500",
   },
 ]
 
@@ -177,7 +177,7 @@ export function WithYouEveryStep() {
         >
           <Link
             to="/resume-builder"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.03] transition-all duration-300 rounded-xl px-10 py-4 text-base font-semibold group relative overflow-hidden"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:scale-[1.03] transition-all duration-300 rounded-xl px-10 py-4 text-base font-semibold group relative overflow-hidden"
           >
             {/* <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" /> */}
             <span className="relative flex items-center gap-2">
