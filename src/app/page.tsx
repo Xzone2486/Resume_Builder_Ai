@@ -61,14 +61,8 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/resume-builder"
-              className="bg-white text-zinc-900 hover:bg-white/90 hover:scale-[1.03] transition-all duration-300 h-14 rounded-xl px-10 text-base font-semibold inline-flex items-center justify-center whitespace-nowrap shadow-lg"
-            >
-              Build with AI
-            </Link>
-            <Link
               to="/ats-analysis"
-              className="bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 hover:scale-105 h-14 rounded-xl px-10 text-base font-semibold transition-all inline-flex items-center justify-center whitespace-nowrap"
+              className="bg-white text-zinc-900 border border-white/20 hover:bg-white/90 hover:scale-[1.03] h-14 rounded-xl px-10 text-base font-semibold transition-all inline-flex items-center justify-center whitespace-nowrap shadow-lg"
             >
               Analyze My Resume
             </Link>

@@ -12,7 +12,6 @@ import { SignInModal } from "@/components/auth/SignInModal"
 const navLinks = [
   { name: "Features", href: "/#features" },
   { name: "ATS Checker", href: "/ats-analysis" },
-  { name: "Resume Builder", href: "/resume-builder" },
   { name: "Examples", href: "/#examples" },
   { name: "Pricing", href: "/pricing" },
 ]
@@ -99,7 +98,6 @@ export function Navbar() {
                       </div>
                       {[
                         { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-                        { icon: FileText, label: "My Resumes", href: "/profile" },
                         { icon: BarChart2, label: "ATS Analysis", href: "/ats-analysis" },
                       ].map(({ icon: Icon, label, href }) => (
                         <Link

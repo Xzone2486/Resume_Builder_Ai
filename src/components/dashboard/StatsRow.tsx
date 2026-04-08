@@ -26,36 +26,36 @@ export function StatsRow() {
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6"
     >
       <StatCard 
-        title="Total Resumes" 
-        value={4} 
+        title="Total ATS Scans" 
+        value={12} 
         icon={<FileText className="w-4 h-4 text-blue-600" />} 
-        trend="+1 this week" 
+        trend="+3 this week" 
         trendUp={true}
         color="blue"
       />
       <StatCard 
-        title="Best ATS Score" 
-        value={92} 
+        title="Avg ATS Score" 
+        value={85} 
         icon={<TrendingUp className="w-4 h-4 text-green-600" />} 
-        trend="+14% vs last month" 
+        trend="+5% vs last month" 
         trendUp={true}
         color="green"
       />
       <StatCard 
-        title="Applications Sent" 
-        value={23} 
-        icon={<Send className="w-4 h-4 text-blue-600" />} 
-        trend="Active" 
-        trendUp={true}
-        color="blue"
+        title="Resume Builder" 
+        value={0} 
+        icon={<CheckCircle className="w-4 h-4 text-orange-600" />} 
+        trend="Coming Soon" 
+        trendUp={false}
+        color="orange"
       />
       <StatCard 
-        title="Interviews" 
-        value={3} 
-        icon={<CheckCircle className="w-4 h-4 text-orange-600" />} 
-        trend="13% conversion" 
-        trendUp={true}
-        color="orange"
+        title="Applications" 
+        value={0} 
+        icon={<Send className="w-4 h-4 text-blue-600" />} 
+        trend="Coming Soon" 
+        trendUp={false}
+        color="blue"
       />
     </motion.div>
   )

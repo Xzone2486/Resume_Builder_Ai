@@ -39,7 +39,7 @@ export function Hero() {
           >
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 text-sm font-medium mb-6 backdrop-blur-sm border border-teal-500/20">
               <span className="flex h-2 w-2 rounded-full bg-teal-600 animate-pulse" />
-              Build Your Resume with AI Now!
+              Optimize Your Resume with AI Now!
             </motion.div>
 
             <motion.h1 
@@ -54,17 +54,15 @@ export function Hero() {
               variants={itemVariants}
               className="text-lg md:text-xl text-muted-foreground mb-8 text-balance max-w-xl"
             >
-              Upload your resume or generate a new one with AI that passes ATS systems and increases your interview chances by 3x.
+              Upload your resume and get an AI review that passes ATS systems and increases your interview chances by 3x.
             </motion.p>
 
-            {/* CTA Buttons */}
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12">
-              <Button variant="gradient" size="xl" asChild>
-                <Link to="/ats-analysis">Analyze My Resume</Link>
-              </Button>
-              <Button variant="glass" size="xl" asChild>
-                <Link to="/resume-builder">Build with AI</Link>
-              </Button>
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4 mb-12">
+              <Link to="/ats-analysis">
+                <Button variant="premium-glass" size="xl">
+                  Analyze My Resume
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Social Proof */}

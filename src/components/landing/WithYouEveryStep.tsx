@@ -176,7 +176,7 @@ export function WithYouEveryStep() {
           className="text-center"
         >
           <Link
-            to="/resume-builder"
+            to="/ats-analysis"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:scale-[1.03] transition-all duration-300 rounded-xl px-10 py-4 text-base font-semibold group relative overflow-hidden"
           >
             {/* <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" /> */}

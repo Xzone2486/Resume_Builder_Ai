@@ -26,12 +26,12 @@ export default function Dashboard() {
           </div>
 
           {/* AI Builder – blue/pink tint */}
-          <div className="rounded-2xl p-6 border border-blue-200/70 bg-blue-50/60 backdrop-blur-sm hover:border-blue-400/60 hover:bg-blue-50/90 transition-all flex flex-col items-center justify-center text-center group cursor-pointer h-48 shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
-              <FileEdit className="w-6 h-6 text-blue-600" />
+          <div className="rounded-2xl p-6 border border-zinc-200/70 bg-zinc-50/40 backdrop-blur-sm flex flex-col items-center justify-center text-center h-48 shadow-sm opacity-70">
+            <div className="w-12 h-12 rounded-full bg-zinc-100 flex items-center justify-center mb-4 shadow-sm opacity-50">
+              <FileEdit className="w-6 h-6 text-zinc-400" />
             </div>
-            <h3 className="font-bold mb-1 text-blue-900">AI Builder</h3>
-            <p className="text-xs text-blue-700/70">Start from scratch or LinkedIn</p>
+            <h3 className="font-bold mb-1 text-zinc-700">AI Builder</h3>
+            <p className="text-xs text-zinc-500 font-semibold px-2 py-1 bg-zinc-100 rounded border border-zinc-200 uppercase tracking-widest mt-1">Coming Soon</p>
           </div>
         </div>
 
