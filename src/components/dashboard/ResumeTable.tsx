@@ -4,10 +4,10 @@ import { MoreVertical, Edit2, Copy, Trash2, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const resumes = [
-  { id: 1, name: "Sr Frontend Eng - Stripe", date: "2 mins ago", score: 94, status: "Optimized" },
-  { id: 2, name: "React Developer - Vercel", date: "2 days ago", score: 88, status: "Needs Work" },
-  { id: 3, name: "Fullstack Eng - Original", date: "1 week ago", score: 45, status: "Draft" },
-  { id: 4, name: "Data Scientist Roles", date: "2 weeks ago", score: 76, status: "Good" },
+  { id: 1, name: "My Resume - v1.pdf", date: "2 mins ago", score: 94, status: "Optimized" },
+  { id: 2, name: "Tech Resume 2024.pdf", date: "2 days ago", score: 88, status: "Needs Work" },
+  { id: 3, name: "Draft_Resume.pdf", date: "1 week ago", score: 45, status: "Draft" },
+  { id: 4, name: "Data_Science_CV.pdf", date: "2 weeks ago", score: 76, status: "Good" },
 ]
 
 export function ResumeTable() {
@@ -16,8 +16,8 @@ export function ResumeTable() {
       <table className="w-full text-sm text-left relative">
         <thead className="text-xs text-muted-foreground uppercase bg-zinc-50 dark:bg-zinc-900/50 border-b border-border sticky top-0 z-10">
           <tr>
-            <th scope="col" className="px-6 py-4 font-medium">Resume Name</th>
-            <th scope="col" className="px-6 py-4 font-medium hidden sm:table-cell">Last Edited</th>
+            <th scope="col" className="px-6 py-4 font-medium">Document Name</th>
+            <th scope="col" className="px-6 py-4 font-medium hidden sm:table-cell">Last Scanned</th>
             <th scope="col" className="px-6 py-4 font-medium">ATS Match</th>
             <th scope="col" className="px-6 py-4 font-medium text-right">Actions</th>
           </tr>

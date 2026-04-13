@@ -20,12 +20,13 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         glass: "glass text-foreground hover:bg-white/80 dark:hover:bg-black/80 hover:scale-105",
         gradient: "bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:scale-[1.03] transition-all duration-300 relative overflow-hidden group",
+        "premium-glass": "relative overflow-hidden bg-gradient-to-r from-blue-600/80 to-teal-600/80 backdrop-blur-md border border-white/20 dark:border-white/10 text-white shadow-lg hover:shadow-xl hover:shadow-teal-500/40 hover:from-blue-600/90 hover:to-teal-600/90 transition-all duration-500 group active:scale-95",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
-        xl: "h-14 rounded-xl px-10 text-base font-semibold",
+        xl: "h-14 rounded-2xl px-10 text-base font-semibold tracking-wide",
         icon: "h-10 w-10",
       },
     },
@@ -51,9 +52,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {variant === 'gradient' ? (
+        {(variant === 'gradient' || variant === 'premium-glass') ? (
           <>
-            {/* <span className="absolute inset-0 bg-white/20 translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-500 ease-in-out" /> */}
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:animate-shine pointer-events-none" />
             <span className="relative flex items-center justify-center gap-2">{props.children}</span>
           </>
         ) : (

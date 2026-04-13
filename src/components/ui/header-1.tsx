@@ -24,7 +24,6 @@ export function Header() {
 	const links = [
 		{ label: 'Features', href: '/#features' },
 		{ label: 'Pricing', href: '/pricing' },
-		{ label: 'Resume Builder', href: '/resume-builder' },
 		{ label: 'ATS Checker', href: '/ats-analysis' },
 	];
 
@@ -114,7 +113,6 @@ export function Header() {
 											</div>
 											{[
 												{ icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-												{ icon: FileText, label: "My Resumes", href: "/profile" },
 												{ icon: BarChart2, label: "ATS Analysis", href: "/ats-analysis" },
 											].map(({ icon: Icon, label, href }) => (
 												<Link
@@ -177,7 +175,6 @@ export function Header() {
 
 						{user && [
 							{ icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
-							{ icon: FileText, label: "My Resumes", href: "/profile" },
 							{ icon: BarChart2, label: "ATS Analysis", href: "/ats-analysis" },
 						].map(({ icon: Icon, label, href }) => (
 							<Link

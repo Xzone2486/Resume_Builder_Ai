@@ -33,7 +33,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/ats-analysis" element={<AtsAnalysisPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/resume-builder" element={<ResumeBuilderPage />} />
+          {/* <Route path="/resume-builder" element={<ResumeBuilderPage />} /> */}
           
           <Route element={<DashboardLayoutWrapper />}>
             <Route path="/dashboard" element={<DashboardPage />} />

@@ -22,7 +22,7 @@ export function WelcomeBanner() {
           {greeting}, <span className="text-amber-700">Ryan 👋</span>
         </h1>
         <p className="text-muted-foreground">
-          You're on a 3-day streak! Your newest resume is scoring better than 82% of applicants.
+          You're on a 3-day streak! Ready to analyze your resume with ATS Checker?
         </p>
         
         <div className="mt-6 flex items-center gap-4">

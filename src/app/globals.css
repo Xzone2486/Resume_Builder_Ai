@@ -266,6 +266,15 @@
   100% { background-position: 200% 0; }
 }
 
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shine {
+  animation: shine 2s infinite;
+}
+
 .animate-blob {
   animation: blob 7s infinite;
 }
